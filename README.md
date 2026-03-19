@@ -1,1 +1,1 @@
-Harpreet Singh
+Welcome to Laptop Repair at Home /laptop care lab, where convenience meets expertise right at your doorstep! 🌟 Whether you're dealing with a slow machine, a broken screen, or any other technical hiccup, our friendly team is dedicated to getting your laptop back on track without you having to leave the comfort of your home. We're passionate about tech and committed to providing a seamless, inclusive service that makes everyone feel like part of our family. Let's bring your laptop back to life together! 
