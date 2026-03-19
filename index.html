@@ -3,119 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LaptopCareLab - Expert Laptop Repair, Computer Repair, Networking, Troubleshooting & Virus Removal in Delhi-NCR. 20+ Years Experience. Harpreet Singh. Call 9953535866">
+    <meta name="description" content="LaptopCareLab - Expert Laptop & Computer Repair in Delhi. 20+ years experience. Fast, reliable service by Harpreet Singh. Virus removal, networking, troubleshooting.">
     <title>LaptopCareLab | Laptop & Computer Repair in Delhi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Mono:wght@400;500&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
         :root {
-            --primary: #0ea5e9;
+            --accent: #22d3ee;
         }
         
-        .tail-container {
-            font-family: 'Inter', system_ui, sans-serif;
+        body {
+            font-family: 'Inter', sans-serif;
         }
         
+        .logo-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.85) 100%);
         }
-        
-        .nav-link {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .nav-link:hover {
-            color: #0ea5e9;
-            transform: translateY(-2px);
-        }
-        
+
         .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .service-card:hover {
-            transform: translateY(-12px) scale(1.03);
-            box-shadow: 0 25px 50px -12px rgb(14 165 233 / 0.25);
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(34 211 238 / 0.3);
+        }
+
+        .nav-link {
+            position: relative;
         }
         
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #22d3ee;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
         .gallery-img {
-            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            transition: all 0.4s ease;
         }
         
         .gallery-img:hover {
             transform: scale(1.08);
+            filter: brightness(1.1);
         }
-        
-        .floating-btn {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        .form-input {
-            transition: all 0.3s ease;
-        }
-        
-        .form-input:focus {
-            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2);
-            border-color: #0ea5e9;
+
+        .tail-container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
-<body class="tail-container bg-zinc-950 text-white overflow-x-hidden">
+<body class="bg-zinc-950 text-white overflow-x-hidden">
     <!-- NAVBAR -->
     <nav class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="tail-container px-6 py-5 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-sky-500 rounded-2xl flex items-center justify-center shadow-lg shadow-sky-500/50">
-                    <i class="fa-solid fa-laptop text-white text-2xl"></i>
-                </div>
+                <div class="w-10 h-10 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-3xl logo-font">💻</div>
                 <div>
-                    <span class="text-2xl font-bold tracking-tighter">LaptopCareLab</span>
+                    <span class="logo-font text-3xl font-semibold tracking-tighter text-white">LaptopCareLab</span>
                 </div>
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#home" class="nav-link text-zinc-300 hover:text-white">Home</a>
-                <a href="#about" class="nav-link text-zinc-300 hover:text-white">About</a>
-                <a href="#services" class="nav-link text-zinc-300 hover:text-white">Services</a>
-                <a href="#gallery" class="nav-link text-zinc-300 hover:text-white">Gallery</a>
-                <a href="#contact" class="nav-link text-zinc-300 hover:text-white">Contact</a>
+            <div class="hidden md:flex items-center gap-10 text-lg">
+                <a href="#home" class="nav-link font-medium text-white hover:text-cyan-400">Home</a>
+                <a href="#about" class="nav-link font-medium text-white hover:text-cyan-400">About</a>
+                <a href="#services" class="nav-link font-medium text-white hover:text-cyan-400">Services</a>
+                <a href="#gallery" class="nav-link font-medium text-white hover:text-cyan-400">Gallery</a>
+                <a href="#contact" class="nav-link font-medium text-white hover:text-cyan-400">Contact</a>
             </div>
 
-            <!-- Call Button -->
-            <a href="tel:9953535866" 
-               class="hidden md:flex items-center gap-2 bg-sky-600 hover:bg-sky-500 px-6 py-3 rounded-3xl font-semibold text-sm transition-all">
-                <i class="fa-solid fa-phone"></i>
-                <span>99535 35866</span>
-            </a>
-
-            <!-- Mobile Hamburger -->
-            <button id="mobile-menu-btn"
-                    class="md:hidden w-11 h-11 flex items-center justify-center text-2xl border border-zinc-700 rounded-2xl">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <!-- CTA + Mobile Hamburger -->
+            <div class="flex items-center gap-4">
+                <a href="tel:9953535866" 
+                   class="hidden sm:flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 transition-colors px-6 py-3 rounded-2xl font-semibold text-sm">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>99535 35866</span>
+                </a>
+                
+                <!-- Hamburger -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-12 h-12 flex items-center justify-center text-3xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-6 px-6">
-            <div class="flex flex-col gap-6 text-lg font-medium">
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-6">
+            <div class="tail-container px-6 flex flex-col gap-6 text-xl">
                 <a href="#home" class="mobile-link">Home</a>
-                <a href="#about" class="mobile-link">About Harpreet Singh</a>
+                <a href="#about" class="mobile-link">About Harpreet</a>
                 <a href="#services" class="mobile-link">Our Services</a>
-                <a href="#gallery" class="mobile-link">Gallery</a>
+                <a href="#gallery" class="mobile-link">Work Gallery</a>
                 <a href="#contact" class="mobile-link">Get In Touch</a>
-                <a href="tel:9953535866" 
-                   class="mt-4 flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 py-4 rounded-3xl font-semibold">
-                    <i class="fa-solid fa-phone"></i>
-                    Call Now: 9953535866
+                <a href="tel:9953535866" class="bg-cyan-500 text-zinc-950 py-4 rounded-3xl text-center font-bold text-xl flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone"></i> Call 99535 35866
                 </a>
             </div>
         </div>
@@ -123,127 +124,126 @@
 
     <!-- HERO -->
     <section id="home" class="hero-bg min-h-screen flex items-center relative">
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10 pt-20 md:pt-0">
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl text-sm mb-8">
-                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-                <span class="font-medium">Delhi-NCR's Trusted Laptop Expert</span>
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
-                Laptop &amp; Computer<br>Repair in <span class="text-sky-400">Delhi</span>
-            </h1>
-            
-            <p class="max-w-xl mx-auto text-xl md:text-2xl text-zinc-300 mb-10">
-                Harpreet Singh • 20+ Years Experience<br>
-                Fast • Reliable • Affordable
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#contact" 
-                   class="bg-white text-zinc-950 hover:bg-amber-300 transition-all px-10 py-5 rounded-3xl font-semibold text-lg flex items-center gap-3 group">
-                    <span>Book Repair Now</span>
-                    <i class="fa-solid fa-arrow-right group-active:rotate-45 transition"></i>
-                </a>
+        <div class="tail-container px-6 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-8 pt-12 md:pt-0">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 text-cyan-400 text-sm font-medium px-6 py-2 rounded-3xl border border-cyan-400/30">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>20+ Years Experience • Delhi-NCR</span>
+                </div>
                 
-                <a href="tel:9953535866" 
-                   class="border-2 border-white/70 hover:border-white px-10 py-5 rounded-3xl font-semibold text-lg flex items-center gap-3">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>Call 99535 35866</span>
-                </a>
+                <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter">
+                    YOUR LAPTOP.<br>OUR PASSION.
+                </h1>
+                
+                <p class="text-2xl text-zinc-400 max-w-lg">
+                    Hi, I'm <span class="text-white font-semibold">Harpreet Singh</span>.<br>
+                    Delhi's go-to computer engineer for fast, affordable fixes.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" 
+                       class="bg-cyan-400 hover:bg-cyan-300 transition-all text-zinc-950 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-4 group">
+                        FIX MY DEVICE NOW
+                        <span class="text-2xl group-active:rotate-12 transition-transform">→</span>
+                    </a>
+                    
+                    <a href="tel:9953535866" 
+                       class="border-2 border-white/70 hover:border-white text-white font-medium px-8 py-6 rounded-3xl flex items-center gap-3 text-xl">
+                        <i class="fa-solid fa-phone"></i>
+                        99535 35866
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-8 pt-6 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span class="text-zinc-400">Same-day service</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span class="text-zinc-400">100% genuine parts</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="mt-16 flex flex-wrap justify-center gap-x-12 gap-y-6 text-sm">
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-check-circle text-emerald-400 text-2xl"></i>
-                    <div>
-                        <div class="font-semibold">20+ Years</div>
-                        <div class="text-zinc-400 text-xs">Experience</div>
+            <!-- Right Photo -->
+            <div class="relative flex justify-center md:justify-end">
+                <div class="relative w-full max-w-[420px]">
+                    <!-- The photo you provided -->
+                    <img id="hero-photo" 
+                         src="https://via.placeholder.com/800x900/1a1a1a/ffffff?text=Harpreet+Singh+Photo" 
+                         alt="Harpreet Singh - Laptop Repair Expert in Delhi"
+                         class="rounded-3xl shadow-2xl shadow-cyan-400/30 w-full h-auto object-cover">
+                    
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-cyan-400 text-cyan-400 px-8 py-4 rounded-3xl shadow-xl flex items-center gap-3">
+                        <div class="text-5xl">🛠️</div>
+                        <div>
+                            <div class="font-bold text-xl">Harpreet Singh</div>
+                            <div class="text-sm opacity-75">20 Years • Trusted by 2000+ clients</div>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-check-circle text-emerald-400 text-2xl"></i>
-                    <div>
-                        <div class="font-semibold">Delhi-NCR</div>
-                        <div class="text-zinc-400 text-xs">Serving Companies &amp; Homes</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-check-circle text-emerald-400 text-2xl"></i>
-                    <div>
-                        <div class="font-semibold">Same Day</div>
-                        <div class="text-zinc-400 text-xs">Service Available</div>
-                    </div>
+                    
+                    <!-- Neon glow ring -->
+                    <div class="absolute inset-0 border-4 border-cyan-400/30 rounded-3xl -z-10 animate-pulse"></div>
                 </div>
             </div>
         </div>
 
         <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 hidden md:flex flex-col items-center gap-2 text-xs tracking-widest">
-            <div class="animate-bounce">SCROLL</div>
-            <i class="fa-solid fa-chevron-down"></i>
+        <div class="absolute bottom-10 left-1/2 hidden md:flex flex-col items-center gap-2 text-xs text-zinc-500">
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-cyan-400 to-transparent"></div>
+            <span class="tracking-widest">SCROLL FOR MAGIC</span>
         </div>
-
-        <!-- Floating WhatsApp-style button -->
-        <a href="https://wa.me/919953535866" target="_blank"
-           class="floating-btn fixed bottom-8 right-8 bg-emerald-500 text-white w-16 h-16 rounded-3xl flex items-center justify-center shadow-2xl shadow-emerald-600 z-50 md:hidden">
-            <i class="fa-brands fa-whatsapp text-4xl"></i>
-        </a>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="inline-flex items-center gap-2 text-sky-400 text-sm font-medium mb-4">
-                    <span class="block w-8 h-px bg-sky-400"></span>
-                    MEET YOUR TECHNICIAN
-                </div>
-                <h2 class="text-5xl font-bold tracking-tighter mb-6">Harpreet Singh</h2>
-                <p class="text-2xl text-zinc-400 mb-8">
-                    20 Years of Expert Computer Engineering in Delhi-NCR
-                </p>
-                
-                <div class="prose prose-invert max-w-none text-zinc-300 text-lg">
-                    <p class="mb-6">
-                        With over two decades of hands-on experience, I have repaired thousands of laptops, desktops, 
-                        and servers for homes, startups, and large companies across Delhi, Gurgaon, Noida, and Faridabad.
-                    </p>
-                    <p>
-                        My mission is simple: deliver fast, honest, and affordable repairs with 100% transparency. 
-                        No hidden charges. No guesswork. Just reliable solutions.
-                    </p>
+        <div class="tail-container px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Photo again (same image) -->
+                <div class="relative">
+                    <img src="https://via.placeholder.com/800x900/1a1a1a/ffffff?text=Harpreet+Singh+Photo" 
+                         alt="Harpreet Singh working on laptop repair"
+                         class="rounded-3xl w-full shadow-2xl">
+                    <div class="absolute top-8 -right-8 bg-emerald-500 text-zinc-950 px-6 py-3 rounded-2xl font-bold text-lg shadow-xl">
+                        20 YEARS<br>OF FIXING TECH
+                    </div>
                 </div>
 
-                <div class="mt-12 grid grid-cols-3 gap-6">
-                    <div class="text-center">
-                        <div class="text-4xl font-bold text-sky-400">5000+</div>
-                        <div class="text-xs tracking-widest text-zinc-500 mt-1">DEVICES FIXED</div>
+                <!-- Bio -->
+                <div class="space-y-8">
+                    <div class="max-w-md">
+                        <span class="px-5 py-2 bg-cyan-900/50 text-cyan-400 text-sm font-medium rounded-3xl">Meet the Expert</span>
                     </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-bold text-sky-400">98%</div>
-                        <div class="text-xs tracking-widest text-zinc-500 mt-1">SUCCESS RATE</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-bold text-sky-400">20</div>
-                        <div class="text-xs tracking-widest text-zinc-500 mt-1">YEARS EXP.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Photo -->
-            <div class="relative">
-                <div class="aspect-square bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700 shadow-2xl">
-                    <img src="https://picsum.photos/id/64/800/800" 
-                         alt="Harpreet Singh - Laptop Repair Expert in Delhi" 
-                         class="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700">
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-700 rounded-3xl px-8 py-6 shadow-xl">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-emerald-500 rounded-2xl flex items-center justify-center text-3xl">20</div>
+                    
+                    <h2 class="text-5xl font-bold tracking-tight">Harpreet Singh</h2>
+                    
+                    <p class="text-xl text-zinc-300 leading-relaxed">
+                        For the last 20 years I've been fixing laptops, desktops, networks and viruses for homes and companies across Delhi-NCR. 
+                        From university students to big corporate offices — I’ve got your back.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-6 pt-6">
                         <div>
-                            <div class="font-semibold text-xl">Years Experience</div>
-                            <div class="text-emerald-400 text-sm">Since 2005</div>
+                            <div class="text-4xl font-bold text-cyan-400">20</div>
+                            <div class="text-zinc-400 text-sm">Years fixing tech</div>
                         </div>
+                        <div>
+                            <div class="text-4xl font-bold text-cyan-400">2000+</div>
+                            <div class="text-zinc-400 text-sm">Happy clients</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-cyan-400">Delhi</div>
+                            <div class="text-zinc-400 text-sm">NCR Service Area</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6 flex items-center gap-4 text-sm uppercase tracking-widest text-zinc-400">
+                        <div class="h-px flex-1 bg-zinc-700"></div>
+                        <span>Trusted by startups, colleges &amp; corporates</span>
+                        <div class="h-px flex-1 bg-zinc-700"></div>
                     </div>
                 </div>
             </div>
@@ -251,62 +251,69 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
+    <section id="services" class="py-24 bg-zinc-950">
+        <div class="tail-container px-6">
             <div class="text-center mb-16">
-                <div class="text-sky-400 font-medium text-sm tracking-[3px]">WHAT WE FIX</div>
-                <h2 class="text-5xl font-bold tracking-tighter mt-3">Our Professional Services</h2>
+                <div class="inline-flex items-center gap-2 px-8 py-3 bg-zinc-900 rounded-3xl text-cyan-400 text-sm font-medium">
+                    <i class="fa-solid fa-toolbox"></i> WHAT I FIX
+                </div>
+                <h2 class="mt-6 text-5xl font-bold tracking-tighter">Services that save your day</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-                    <div class="w-14 h-14 bg-orange-500/10 text-orange-400 rounded-2xl flex items-center justify-center text-3xl mb-8">
-                        💻
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
+                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">💻</div>
+                    <h3 class="text-3xl font-semibold mb-3">Laptop Repair</h3>
+                    <p class="text-zinc-400">Screen replacement, keyboard fix, battery issues, overheating — all brands (Dell, HP, Lenovo, MacBook &amp; more).</p>
+                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
+                        <span>Starting ₹799</span>
+                        <span class="flex-1 h-px bg-zinc-700"></span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Laptop Repair</h3>
-                    <p class="text-zinc-400 mb-8">Screen replacement, keyboard fix, battery issues, hinge repair, overheating, and more. All major brands.</p>
-                    <a href="#contact" class="text-sky-400 font-medium flex items-center gap-2 text-sm">Get Quote →</a>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-                    <div class="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-8">
-                        🖥️
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
+                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🖥️</div>
+                    <h3 class="text-3xl font-semibold mb-3">Desktop &amp; PC Repair</h3>
+                    <p class="text-zinc-400">Motherboard repair, RAM upgrade, SSD installation, power supply issues — home &amp; office PCs.</p>
+                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
+                        <span>Starting ₹599</span>
+                        <span class="flex-1 h-px bg-zinc-700"></span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Desktop &amp; PC Repair</h3>
-                    <p class="text-zinc-400 mb-8">Motherboard repair, RAM upgrade, SSD installation, power supply issues, and full system rebuilds.</p>
-                    <a href="#contact" class="text-sky-400 font-medium flex items-center gap-2 text-sm">Get Quote →</a>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-                    <div class="w-14 h-14 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center text-3xl mb-8">
-                        🌐
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
+                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🌐</div>
+                    <h3 class="text-3xl font-semibold mb-3">Networking Solutions</h3>
+                    <p class="text-zinc-400">Wi-Fi setup, router configuration, LAN networking, CCTV installation, office network troubleshooting.</p>
+                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
+                        <span>Starting ₹999</span>
+                        <span class="flex-1 h-px bg-zinc-700"></span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Networking Solutions</h3>
-                    <p class="text-zinc-400 mb-8">WiFi setup, router configuration, office networking, CCTV installation, and LAN troubleshooting.</p>
-                    <a href="#contact" class="text-sky-400 font-medium flex items-center gap-2 text-sm">Get Quote →</a>
                 </div>
 
                 <!-- Service 4 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-                    <div class="w-14 h-14 bg-red-500/10 text-red-400 rounded-2xl flex items-center justify-center text-3xl mb-8">
-                        🔧
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
+                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🔧</div>
+                    <h3 class="text-3xl font-semibold mb-3">Troubleshooting</h3>
+                    <p class="text-zinc-400">Blue screen, slow performance, random crashes, hardware detection issues — I diagnose in minutes.</p>
+                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
+                        <span>Starting ₹499</span>
+                        <span class="flex-1 h-px bg-zinc-700"></span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Troubleshooting &amp; Diagnosis</h3>
-                    <p class="text-zinc-400 mb-8">Slow performance, blue screen, random restarts, hardware detection issues — we find and fix root causes fast.</p>
-                    <a href="#contact" class="text-sky-400 font-medium flex items-center gap-2 text-sm">Get Quote →</a>
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-                    <div class="w-14 h-14 bg-lime-500/10 text-lime-400 rounded-2xl flex items-center justify-center text-3xl mb-8">
-                        🛡️
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50 col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🛡️</div>
+                    <h3 class="text-3xl font-semibold mb-3">Virus &amp; Malware Removal</h3>
+                    <p class="text-zinc-400">Complete cleanup, ransomware removal, data recovery, Windows reinstallation with full security setup.</p>
+                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
+                        <span>Starting ₹699</span>
+                        <span class="flex-1 h-px bg-zinc-700"></span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3">Virus &amp; Malware Removal</h3>
-                    <p class="text-zinc-400 mb-8">Complete system cleaning, ransomware recovery, data protection setup, and security optimization.</p>
-                    <a href="#contact" class="text-sky-400 font-medium flex items-center gap-2 text-sm">Get Quote →</a>
                 </div>
             </div>
         </div>
@@ -314,242 +321,265 @@
 
     <!-- GALLERY -->
     <section id="gallery" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <div class="text-amber-400 text-sm font-medium">REAL WORK • REAL RESULTS</div>
-                <h2 class="text-5xl font-bold tracking-tighter">Repair Gallery</h2>
+        <div class="tail-container px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-cyan-400 text-sm tracking-widest font-medium">REAL WORK • REAL RESULTS</span>
+                    <h2 class="text-5xl font-bold tracking-tighter">Latest Repairs</h2>
+                </div>
+                <a href="#contact" class="text-cyan-400 hover:text-cyan-300 flex items-center gap-3 text-sm font-medium">
+                    NEED A FIX LIKE THIS? 
+                    <span class="text-3xl">→</span>
+                </a>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Gallery Images -->
-                <div class="overflow-hidden rounded-3xl aspect-video">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Gallery images (high-quality free stock) -->
+                <div class="relative overflow-hidden rounded-3xl">
                     <img src="https://picsum.photos/id/1015/800/600" 
                          alt="Laptop screen replacement in Delhi" 
                          class="gallery-img w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="font-medium">MacBook Pro Screen Swap</p>
+                    </div>
                 </div>
-                <div class="overflow-hidden rounded-3xl aspect-video">
-                    <img src="https://picsum.photos/id/201/800/600" 
-                         alt="Motherboard repair by Harpreet Singh" 
-                         class="gallery-img w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden rounded-3xl aspect-video">
-                    <img src="https://picsum.photos/id/251/800/600" 
-                         alt="Virus removal service in progress" 
-                         class="gallery-img w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden rounded-3xl aspect-video">
-                    <img src="https://picsum.photos/id/29/800/600" 
-                         alt="Office networking setup Delhi" 
-                         class="gallery-img w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden rounded-3xl aspect-video">
+                
+                <div class="relative overflow-hidden rounded-3xl">
                     <img src="https://picsum.photos/id/160/800/600" 
-                         alt="Before and after laptop repair" 
+                         alt="Virus removal on Windows laptop" 
                          class="gallery-img w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="font-medium">Full Virus Cleanup</p>
+                    </div>
                 </div>
-                <div class="overflow-hidden rounded-3xl aspect-video">
-                    <img src="https://picsum.photos/id/318/800/600" 
-                         alt="SSD upgrade service" 
-                         class="gallery-img w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden rounded-3xl aspect-video">
-                    <img src="https://picsum.photos/id/133/800/600" 
-                         alt="Desktop PC cleaning and repair" 
-                         class="gallery-img w-full h-full object-cover">
-                </div>
-                <div class="overflow-hidden rounded-3xl aspect-video">
+                
+                <div class="relative overflow-hidden rounded-3xl">
                     <img src="https://picsum.photos/id/201/800/600" 
-                         alt="Harpreet Singh working on MacBook" 
+                         alt="Networking setup for office" 
                          class="gallery-img w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="font-medium">Office Wi-Fi Network</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl">
+                    <img src="https://picsum.photos/id/251/800/600" 
+                         alt="HP laptop motherboard repair Delhi" 
+                         class="gallery-img w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="font-medium">Motherboard Repair</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl">
+                    <img src="https://picsum.photos/id/29/800/600" 
+                         alt="SSD upgrade in laptop" 
+                         class="gallery-img w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="font-medium">SSD + RAM Upgrade</p>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-3xl">
+                    <img src="https://picsum.photos/id/318/800/600" 
+                         alt="Gaming laptop cooling fix Delhi" 
+                         class="gallery-img w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <p class="font-medium">Gaming Laptop Cooling Fix</p>
+                    </div>
                 </div>
             </div>
             
-            <p class="text-center text-zinc-400 text-sm mt-8">Swipe or tap images • All repairs done in Delhi-NCR</p>
+            <p class="text-center text-zinc-400 text-sm mt-12">Swipe or scroll — every device tells a story of a happy client in Delhi-NCR</p>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-5 gap-16">
-            <!-- Left Info -->
-            <div class="md:col-span-2">
-                <h2 class="text-5xl font-bold tracking-tighter mb-6">Ready to Fix Your Device?</h2>
-                <p class="text-zinc-400 text-lg mb-10">Call or message Harpreet Singh directly. Same-day service available in most parts of Delhi-NCR.</p>
-                
-                <div class="space-y-8">
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-sky-500/10 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">📍</div>
-                        <div>
-                            <div class="font-semibold">Service Area</div>
-                            <div class="text-zinc-400">Entire Delhi-NCR<br>Delhi • Gurgaon • Noida • Faridabad</div>
-                        </div>
-                    </div>
+    <section id="contact" class="py-24 bg-zinc-950">
+        <div class="tail-container px-6 grid lg:grid-cols-2 gap-16">
+            <!-- Form -->
+            <div>
+                <div class="max-w-md">
+                    <h2 class="text-5xl font-bold tracking-tighter mb-3">Let's fix it today</h2>
+                    <p class="text-zinc-400 text-xl mb-10">Drop your details and I'll call you within 30 minutes.</p>
                     
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">📞</div>
-                        <div>
-                            <a href="tel:9953535866" class="block font-semibold text-3xl hover:text-emerald-400 transition">99535 35866</a>
-                            <div class="text-zinc-400 text-sm">Call / WhatsApp</div>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Your Name</label>
+                                <input type="text" id="name" required
+                                       class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Phone</label>
+                                <input type="tel" id="phone" required
+                                       class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-amber-500/10 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">⏰</div>
+                        
                         <div>
-                            <div class="font-semibold">Hours</div>
-                            <div class="text-zinc-400">Mon–Sat: 9:00 AM – 8:00 PM<br>Sunday: Emergency only</div>
+                            <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Email (optional)</label>
+                            <input type="email" id="email"
+                                   class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
                         </div>
-                    </div>
+                        
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">What needs fixing?</label>
+                            <select id="service" required
+                                    class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
+                                <option value="">Select service</option>
+                                <option value="Laptop Repair">Laptop Repair</option>
+                                <option value="Desktop Repair">Desktop Repair</option>
+                                <option value="Virus Removal">Virus Removal</option>
+                                <option value="Networking">Networking Setup</option>
+                                <option value="Troubleshooting">Troubleshooting</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Message / Problem</label>
+                            <textarea id="message" rows="4" required
+                                      class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit"
+                                class="w-full bg-gradient-to-r from-cyan-400 to-emerald-400 text-zinc-950 font-bold text-2xl py-7 rounded-3xl hover:scale-105 transition-all flex items-center justify-center gap-4">
+                            SEND MESSAGE 
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="md:col-span-3 bg-zinc-900 rounded-3xl p-8 md:p-12">
-                <form id="contact-form" class="space-y-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-medium text-zinc-400 mb-2">YOUR NAME</label>
-                            <input type="text" id="name" required
-                                   class="form-input bg-zinc-950 border border-zinc-700 focus:border-sky-500 w-full px-6 py-5 rounded-3xl outline-none text-lg">
+            <!-- Contact Info -->
+            <div class="lg:pt-12">
+                <div class="bg-zinc-900 rounded-3xl p-10 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-10">
+                            <div class="w-16 h-16 bg-cyan-400 rounded-2xl flex items-center justify-center text-4xl text-zinc-950">📍</div>
+                            <div>
+                                <div class="font-medium text-2xl">Delhi-NCR</div>
+                                <div class="text-zinc-400">Home service available across Delhi, Noida, Gurgaon, Faridabad</div>
+                            </div>
                         </div>
-                        <div>
-                            <label class="block text-xs font-medium text-zinc-400 mb-2">PHONE NUMBER</label>
-                            <input type="tel" id="phone" required
-                                   class="form-input bg-zinc-950 border border-zinc-700 focus:border-sky-500 w-full px-6 py-5 rounded-3xl outline-none text-lg">
+                        
+                        <a href="tel:9953535866" class="block group">
+                            <div class="flex items-center gap-6 border-b border-zinc-700 pb-8">
+                                <i class="fa-solid fa-phone text-5xl text-cyan-400 group-active:scale-110 transition-transform"></i>
+                                <div>
+                                    <div class="text-4xl font-bold tracking-tighter">99535 35866</div>
+                                    <div class="text-emerald-400 text-sm">Tap to call • WhatsApp ready</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="pt-12 border-t border-zinc-700">
+                        <div class="text-xs uppercase tracking-widest text-zinc-500 mb-3">Also available on</div>
+                        <div class="flex gap-6 text-4xl">
+                            <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                     
-                    <div>
-                        <label class="block text-xs font-medium text-zinc-400 mb-2">EMAIL (OPTIONAL)</label>
-                        <input type="email" id="email"
-                               class="form-input bg-zinc-950 border border-zinc-700 focus:border-sky-500 w-full px-6 py-5 rounded-3xl outline-none text-lg">
+                    <div class="mt-auto pt-10 text-xs text-zinc-500">
+                        Harpreet Singh<br>
+                        LaptopCareLab.com<br>
+                        Delhi, India
                     </div>
-                    
-                    <div>
-                        <label class="block text-xs font-medium text-zinc-400 mb-2">SERVICE NEEDED</label>
-                        <select id="service" required
-                                class="form-input bg-zinc-950 border border-zinc-700 focus:border-sky-500 w-full px-6 py-5 rounded-3xl outline-none text-lg">
-                            <option value="">Select Service</option>
-                            <option value="Laptop Repair">Laptop Repair</option>
-                            <option value="Desktop Repair">Desktop / PC Repair</option>
-                            <option value="Networking">Networking Setup</option>
-                            <option value="Troubleshooting">Troubleshooting</option>
-                            <option value="Virus Removal">Virus &amp; Malware Removal</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-xs font-medium text-zinc-400 mb-2">TELL US ABOUT YOUR PROBLEM</label>
-                        <textarea id="message" rows="5" required
-                                  class="form-input bg-zinc-950 border border-zinc-700 focus:border-sky-500 w-full px-6 py-5 rounded-3xl outline-none resize-none text-lg"></textarea>
-                    </div>
-                    
-                    <button type="submit"
-                            class="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 py-6 rounded-3xl font-semibold text-xl transition-all active:scale-95">
-                        SEND INQUIRY • WE'LL CALL YOU IN 15 MINS
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-zinc-950 border-t border-zinc-800 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex items-center gap-4">
-                    <div class="w-9 h-9 bg-sky-500 rounded-2xl flex items-center justify-center">
-                        <i class="fa-solid fa-laptop text-white"></i>
-                    </div>
-                    <div class="text-2xl font-bold">LaptopCareLab</div>
-                </div>
-                
-                <div class="text-zinc-400 text-sm text-center md:text-right">
-                    © 2026 LaptopCareLab • Delhi-NCR<br>
-                    Harpreet Singh • Freelance Computer Engineer<br>
-                    <a href="tel:9953535866" class="hover:text-white">99535 35866</a>
+    <footer class="bg-black py-16 border-t border-zinc-800">
+        <div class="tail-container px-6 text-center">
+            <div class="flex justify-center mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 text-3xl">💻</div>
+                    <span class="logo-font text-4xl font-semibold tracking-tighter">LaptopCareLab</span>
                 </div>
             </div>
             
-            <div class="text-center text-[10px] text-zinc-600 mt-16">
-                Built for mobile • Fast loading • Designed to convert inquiries
-            </div>
+            <p class="text-zinc-500 text-sm">© 2026 Harpreet Singh • All rights reserved</p>
+            <p class="text-zinc-600 text-xs mt-6">Built with ❤️ for Delhi's youth who hate slow laptops</p>
         </div>
     </footer>
 
+    <!-- Success Modal -->
+    <div id="success-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[999]">
+        <div class="bg-zinc-900 rounded-3xl p-10 max-w-xs text-center">
+            <div class="text-7xl mb-6">🎉</div>
+            <h3 class="text-3xl font-bold mb-3">Message Received!</h3>
+            <p class="text-zinc-400 mb-8">Harpreet will call you shortly on 99535 35866.</p>
+            <button onclick="closeModal()" 
+                    class="bg-cyan-400 text-zinc-950 px-10 py-4 rounded-3xl font-semibold">Awesome!</button>
+        </div>
+    </div>
+
     <script>
-        // Tailwind script run
-        function initializeTailwind() {
-            // Already initialized via CDN
-        }
+        // Tailwind script already loaded via CDN
         
         // Mobile menu toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const menuBtn = document.getElementById('mobile-menu-btn')
+        const mobileMenu = document.getElementById('mobile-menu')
         
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = mobileBtn.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-xmark');
-            }
-        });
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden')
+            const icon = menuBtn.querySelector('i')
+            icon.classList.toggle('fa-bars')
+            icon.classList.toggle('fa-xmark')
+        })
         
-        // Close mobile menu when clicking links
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                const icon = mobileBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-xmark');
-            });
-        });
-        
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return
+                e.preventDefault()
+                const target = document.querySelector(this.getAttribute('href'))
                 if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' })
                 }
-            });
-        });
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden')
+                    menuBtn.querySelector('i').classList.add('fa-bars')
+                    menuBtn.querySelector('i').classList.remove('fa-xmark')
+                }
+            })
+        })
         
         // Contact form submission
-        const form = document.getElementById('contact-form');
+        const form = document.getElementById('contact-form')
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault()
             
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            
-            // Simulate sending
+            // Fake submission delay
             setTimeout(() => {
-                alert(`✅ Thank you, ${name}!\n\nYour inquiry has been received.\n\nHarpreet Singh will call you shortly on ${phone}.\n\nExpected response time: under 15 minutes.`);
-                
-                // Reset form
-                form.reset();
-            }, 800);
-        });
+                document.getElementById('success-modal').classList.remove('hidden')
+                form.reset()
+            }, 800)
+        })
         
-        // Keyboard shortcut hint for demo
-        console.log('%c✅ Website ready! Mobile-friendly, fast, and built to generate inquiries.\nCall 9953535866 directly from any device.', 'color:#0ea5e9; font-family:monospace');
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden')
+        }
         
-        // Make phone numbers clickable everywhere
-        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', () => {
-                console.log('📞 Calling 9953535866...');
-            });
-        });
+        // Replace placeholder photo with your actual image
+        // IMPORTANT INSTRUCTION:
+        // 1. Save the photo you uploaded in this chat as "harpreet.jpg"
+        // 2. Put it in the same folder as this HTML file
+        // 3. Replace both placeholder src below with "harpreet.jpg"
+        
+        const heroPhoto = document.getElementById('hero-photo')
+        // Uncomment and change the line below once you have the file:
+        // heroPhoto.src = "harpreet.jpg"
+        
+        // For demo purposes it currently shows a placeholder.
+        // When you host this on Netlify / Vercel / GitHub Pages, just upload the real photo.
+        
+        console.log('%c✅ LaptopCareLab website ready! Replace the photo src with your real image.', 'color:#22d3ee; font-family:monospace')
     </script>
 </body>
 </html>
