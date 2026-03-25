@@ -1,585 +1,1429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LaptopCareLab - Expert Laptop & Computer Repair in Delhi. 20+ years experience. Fast, reliable service by Harpreet Singh. Virus removal, networking, troubleshooting.">
-    <title>LaptopCareLab | Laptop & Computer Repair in Delhi</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
-        :root {
-            --accent: #22d3ee;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .logo-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LaptopCareLab — Elite computer & laptop repair in Delhi-NCR by Harpreet Singh. 20 years experience. Corporate IT support, networking, virus removal & troubleshooting. Call 9953535866."/>
+  <meta name="keywords" content="laptop repair Delhi NCR, computer repair corporate, IT support Delhi, networking solutions NCR, virus removal Delhi, Harpreet Singh engineer"/>
+  <meta name="author" content="Harpreet Singh — LaptopCareLab"/>
+  <meta property="og:title" content="LaptopCareLab — Professional IT & Repair Services Delhi-NCR"/>
+  <meta property="og:description" content="20 years of trusted computer engineering for corporates & young professionals in Delhi-NCR."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.LaptopCareLab.com"/>
+  <title>LaptopCareLab | Professional Computer Repair & IT Services Delhi-NCR</title>
 
-        .hero-bg {
-            background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.85) 100%);
-        }
+  <!-- Google Fonts: Bebas Neue (display) + Outfit (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 25px 50px -12px rgb(34 211 238 / 0.3);
-        }
+  <style>
+    /* ══════════════════════════════════════
+       DESIGN TOKENS
+    ══════════════════════════════════════ */
+    :root{
+      --ink:#0b0b0b;
+      --ink2:#2a2a2a;
+      --ink3:#5a5a5a;
+      --paper:#f5f3ef;
+      --paper2:#ede9e3;
+      --paper3:#e3ddd5;
+      --lime:#c8ff00;
+      --lime-dark:#9fc800;
+      --red:#ff3c2f;
+      --blue:#1a56ff;
+      --card:#ffffff;
+      --border:#d4cfc7;
+      --radius:12px;
+      --radius-sm:7px;
+      --shadow:0 4px 32px rgba(0,0,0,0.09);
+      --shadow-lg:0 16px 64px rgba(0,0,0,0.14);
+    }
 
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #22d3ee;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
+    /* ══════════════════════════════════════
+       RESET
+    ══════════════════════════════════════ */
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{
+      background:var(--paper);
+      color:var(--ink);
+      font-family:'Outfit',sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;height:auto;display:block;}
+    a{color:inherit;text-decoration:none;}
+    ul{list-style:none;}
+    button{font-family:'Outfit',sans-serif;cursor:pointer;}
 
-        .gallery-img {
-            transition: all 0.4s ease;
-        }
-        
-        .gallery-img:hover {
-            transform: scale(1.08);
-            filter: brightness(1.1);
-        }
+    /* ══════════════════════════════════════
+       TYPOGRAPHY
+    ══════════════════════════════════════ */
+    h1,h2,h3,.display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;line-height:1.0;}
+    h1{font-size:clamp(3.5rem,10vw,8rem);}
+    h2{font-size:clamp(2.2rem,5vw,4rem);}
+    h3{font-size:clamp(1.1rem,2.5vw,1.5rem);font-family:'Outfit',sans-serif;font-weight:700;letter-spacing:0;}
 
-        .tail-container {
-            max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+    /* ══════════════════════════════════════
+       UTILITIES
+    ══════════════════════════════════════ */
+    .container{width:92%;max-width:1200px;margin:0 auto;}
+    .section{padding:96px 0;}
+    .label{
+      display:inline-block;
+      font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+      color:var(--ink3);border:1px solid var(--border);
+      padding:5px 14px;border-radius:100px;margin-bottom:18px;
+      background:var(--card);
+    }
+    .label.light{color:var(--paper);border-color:rgba(255,255,255,.25);background:transparent;}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:14px 30px;border-radius:var(--radius-sm);
+      font-weight:700;font-size:.95rem;border:none;
+      transition:all .22s ease;cursor:pointer;font-family:'Outfit',sans-serif;
+    }
+    .btn-lime{background:var(--lime);color:var(--ink);}
+    .btn-lime:hover{background:var(--lime-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,255,0,.35);}
+    .btn-ink{background:var(--ink);color:#fff;}
+    .btn-ink:hover{background:var(--ink2);transform:translateY(-2px);}
+    .btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink);}
+    .btn-outline:hover{background:var(--ink);color:#fff;}
+    .btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);}
+    .btn-outline-white:hover{background:#fff;color:var(--ink);}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+
+    /* ══════════════════════════════════════
+       GRAIN OVERLAY
+    ══════════════════════════════════════ */
+    body::after{
+      content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;
+      opacity:.025;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ══════════════════════════════════════
+       TOP ALERT BAR
+    ══════════════════════════════════════ */
+    .topbar{
+      background:var(--ink);color:#fff;
+      padding:9px 0;font-size:.8rem;font-weight:500;
+    }
+    .topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+    .topbar a{color:var(--lime);font-weight:700;}
+    .tb-left,.tb-right{display:flex;align-items:center;gap:24px;}
+    .tb-item{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.7);}
+
+    /* ══════════════════════════════════════
+       NAV
+    ══════════════════════════════════════ */
+    .navbar{
+      position:sticky;top:0;z-index:200;
+      background:rgba(245,243,239,.95);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:15px 0;gap:20px;
+    }
+    .nav-logo{display:flex;align-items:center;gap:11px;}
+    .nav-logo-mark{
+      width:38px;height:38px;border-radius:9px;
+      background:var(--ink);display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;
+    }
+    .nav-logo-mark svg{width:20px;height:20px;fill:var(--lime);}
+    .nav-logo-text .brand{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.05em;line-height:1.1;}
+    .nav-logo-text .url{font-size:.65rem;color:var(--ink3);letter-spacing:.06em;}
+    .nav-links{display:flex;align-items:center;gap:4px;}
+    .nav-links a{
+      padding:8px 14px;border-radius:var(--radius-sm);
+      font-size:.88rem;font-weight:600;color:var(--ink2);
+      transition:all .18s;
+    }
+    .nav-links a:hover{background:var(--paper2);color:var(--ink);}
+    .nav-actions{display:flex;align-items:center;gap:10px;}
+    .hamburger{display:none;background:none;border:none;padding:6px;}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:all .3s;}
+    .mobile-nav{
+      display:none;background:var(--card);
+      border-bottom:1px solid var(--border);
+      padding:12px 0;
+    }
+    .mobile-nav.open{display:block;}
+    .mobile-nav a{
+      display:block;padding:12px 5%;font-weight:600;font-size:1rem;
+      border-bottom:1px solid var(--paper2);color:var(--ink);
+    }
+    .mobile-nav a:last-child{border:none;}
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    .hero{
+      background:var(--ink);
+      overflow:hidden;position:relative;
+      padding:100px 0 0;
+      min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end;
+    }
+    .hero-grid-bg{
+      position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(200,255,0,.04) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(200,255,0,.04) 1px,transparent 1px);
+      background-size:60px 60px;
+      pointer-events:none;
+    }
+    .hero-circle{
+      position:absolute;top:-20%;right:-15%;
+      width:70vw;height:70vw;border-radius:50%;
+      background:radial-gradient(circle,rgba(200,255,0,.06) 0%,transparent 65%);
+      pointer-events:none;
+    }
+    .hero-content{
+      position:relative;z-index:2;
+      display:grid;grid-template-columns:1.1fr 0.9fr;
+      gap:48px;align-items:flex-end;padding-bottom:64px;
+    }
+    .hero-eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:rgba(255,255,255,.5);font-size:.78rem;font-weight:600;
+      letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;
+    }
+    .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--lime);}
+    .hero-h1{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:clamp(4rem,11vw,9.5rem);
+      line-height:.95;letter-spacing:.01em;
+      color:#fff;margin-bottom:10px;
+    }
+    .hero-h1 .accent{color:var(--lime);}
+    .hero-sub{
+      color:rgba(255,255,255,.5);font-size:1.05rem;
+      max-width:460px;margin-bottom:36px;line-height:1.65;
+    }
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px;}
+    .hero-stats-row{
+      display:flex;gap:0;border-top:1px solid rgba(255,255,255,.08);
+      padding-top:28px;
+    }
+    .h-stat{flex:1;text-align:center;border-right:1px solid rgba(255,255,255,.08);}
+    .h-stat:last-child{border:none;}
+    .h-stat .n{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;color:var(--lime);line-height:1;}
+    .h-stat .l{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:2px;letter-spacing:.06em;text-transform:uppercase;}
+
+    /* Hero right — photo card */
+    .hero-right{position:relative;align-self:flex-end;}
+    .hero-photo-card{
+      border-radius:18px 18px 0 0;overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 -20px 60px rgba(0,0,0,.4);
+      background:#111;
+      position:relative;
+    }
+    .hero-photo-card iframe{width:100%;aspect-ratio:3/4;border:none;display:block;}
+    .hero-photo-card::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(0deg,rgba(11,11,11,.8) 0%,transparent 45%);
+      pointer-events:none;
+    }
+    .hero-name-tag{
+      position:absolute;bottom:20px;left:20px;right:20px;z-index:3;
+    }
+    .hero-name-tag .eng-name{
+      font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;line-height:1;
+    }
+    .hero-name-tag .eng-title{
+      font-size:.8rem;color:var(--lime);font-weight:600;
+      letter-spacing:.1em;text-transform:uppercase;margin-top:4px;
+    }
+    .hero-badge-corner{
+      position:absolute;top:20px;right:20px;z-index:3;
+      background:var(--lime);color:var(--ink);
+      padding:6px 14px;border-radius:100px;
+      font-size:.75rem;font-weight:800;letter-spacing:.04em;
+    }
+
+    /* ══════════════════════════════════════
+       MARQUEE STRIP
+    ══════════════════════════════════════ */
+    .marquee-strip{
+      background:var(--lime);padding:13px 0;overflow:hidden;
+      border-top:none;
+    }
+    .marquee-track{
+      display:flex;gap:0;white-space:nowrap;
+      animation:marquee 20s linear infinite;
+    }
+    @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+    .marquee-item{
+      font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.06em;
+      color:var(--ink);padding:0 28px;flex-shrink:0;
+    }
+    .marquee-item::after{content:'◆';margin-left:28px;font-size:.7rem;vertical-align:middle;}
+
+    /* ══════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════ */
+    .services{background:var(--paper);}
+    .services-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;gap:24px;flex-wrap:wrap;}
+    .srv-card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:32px;
+      position:relative;overflow:hidden;
+      transition:all .28s ease;
+    }
+    .srv-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+      background:var(--lime);transform:scaleX(0);transform-origin:left;
+      transition:transform .3s ease;
+    }
+    .srv-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent;}
+    .srv-card:hover::before{transform:scaleX(1);}
+    .srv-num{
+      font-family:'Bebas Neue',sans-serif;font-size:3.5rem;
+      color:var(--paper2);line-height:1;margin-bottom:14px;
+      transition:color .28s;
+    }
+    .srv-card:hover .srv-num{color:var(--lime);}
+    .srv-icon{font-size:1.8rem;margin-bottom:12px;}
+    .srv-card h3{margin-bottom:10px;font-size:1.1rem;}
+    .srv-card p{color:var(--ink3);font-size:.9rem;line-height:1.65;}
+    .srv-tag{
+      display:inline-block;margin-top:16px;
+      font-size:.75rem;font-weight:700;
+      color:var(--ink);background:var(--lime);
+      padding:4px 12px;border-radius:100px;
+    }
+    .srv-tag.corp{background:var(--ink);color:#fff;}
+
+    /* ══════════════════════════════════════
+       VALUE PROPS / WHY
+    ══════════════════════════════════════ */
+    .why{background:var(--ink);color:#fff;}
+    .why-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    .why-photo{
+      border-radius:var(--radius);overflow:hidden;
+      border:1px solid rgba(255,255,255,.07);
+      position:relative;
+    }
+    .why-photo iframe{width:100%;aspect-ratio:4/5;border:none;display:block;}
+    .why-photo::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent 50%,rgba(11,11,11,.75) 100%);
+      pointer-events:none;
+    }
+    .why-exp-bubble{
+      position:absolute;bottom:-20px;right:-20px;z-index:2;
+      background:var(--lime);color:var(--ink);
+      width:110px;height:110px;border-radius:50%;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;
+    }
+    .why-exp-bubble .big{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;}
+    .why-exp-bubble .sm{font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+    .why-content{padding-bottom:20px;}
+    .why-content .label.light{margin-bottom:16px;}
+    .why-content h2{margin-bottom:22px;}
+    .why-content p{color:rgba(255,255,255,.55);font-size:1rem;line-height:1.75;margin-bottom:36px;}
+    .why-feats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:36px;}
+    .why-feat{
+      background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+      border-radius:var(--radius-sm);padding:18px;
+    }
+    .why-feat .feat-icon{font-size:1.4rem;margin-bottom:8px;}
+    .why-feat h3{font-size:.92rem;font-weight:700;margin-bottom:4px;color:#fff;}
+    .why-feat p{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.5;}
+
+    /* ══════════════════════════════════════
+       CORPORATE STRIP
+    ══════════════════════════════════════ */
+    .corp-strip{background:var(--paper2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .corp-strip-inner{
+      display:grid;grid-template-columns:auto 1fr auto;
+      align-items:center;gap:40px;padding:48px 0;
+    }
+    .corp-big{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:clamp(2.5rem,5vw,4rem);line-height:.95;
+    }
+    .corp-divider{width:1px;height:80px;background:var(--border);}
+    .corp-perks{display:flex;flex-direction:column;gap:10px;}
+    .corp-perk{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:500;}
+    .corp-perk::before{
+      content:'';width:20px;height:20px;border-radius:50%;
+      background:var(--lime);flex-shrink:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230b0b0b'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+      background-size:13px;background-repeat:no-repeat;background-position:center;
+    }
+
+    /* ══════════════════════════════════════
+       PROCESS
+    ══════════════════════════════════════ */
+    .process{background:var(--paper);}
+    .process-steps{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      gap:0;border:1px solid var(--border);border-radius:var(--radius);
+      overflow:hidden;margin-top:52px;
+    }
+    .p-step{
+      padding:36px 28px;
+      border-right:1px solid var(--border);
+      transition:background .25s;
+      position:relative;
+    }
+    .p-step:last-child{border:none;}
+    .p-step:hover{background:var(--card);}
+    .p-step-num{
+      font-family:'Bebas Neue',sans-serif;font-size:4rem;
+      color:var(--paper2);line-height:1;margin-bottom:14px;
+    }
+    .p-step h3{margin-bottom:8px;font-size:1rem;}
+    .p-step p{font-size:.85rem;color:var(--ink3);line-height:1.6;}
+    .p-step-arrow{
+      position:absolute;top:36px;right:-14px;z-index:2;
+      width:28px;height:28px;background:var(--lime);
+      border-radius:50%;display:flex;align-items:center;justify-content:center;
+      font-size:.8rem;font-weight:700;
+    }
+    .p-step:last-child .p-step-arrow{display:none;}
+
+    /* ══════════════════════════════════════
+       GALLERY
+    ══════════════════════════════════════ */
+    .gallery{background:var(--paper2);}
+    .gallery-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:16px;}
+    .gallery-mosaic{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      grid-template-rows:220px 220px;
+      gap:14px;
+    }
+    .g-item{
+      border-radius:var(--radius-sm);overflow:hidden;
+      background:var(--paper3);border:1px solid var(--border);
+      display:flex;align-items:center;justify-content:center;
+      position:relative;cursor:pointer;transition:transform .28s,box-shadow .28s;
+    }
+    .g-item:hover{transform:scale(1.02);box-shadow:var(--shadow-lg);}
+    .g-item:nth-child(1){grid-column:span 5;grid-row:span 2;}
+    .g-item:nth-child(2){grid-column:span 4;}
+    .g-item:nth-child(3){grid-column:span 3;}
+    .g-item:nth-child(4){grid-column:span 3;}
+    .g-item:nth-child(5){grid-column:span 4;}
+    .g-item:nth-child(6){grid-column:span 5;}
+    .g-placeholder{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:10px;width:100%;height:100%;background:var(--paper2);
+      padding:20px;text-align:center;
+    }
+    .g-placeholder .g-icon{font-size:2.4rem;opacity:.5;}
+    .g-placeholder .g-label{
+      font-size:.75rem;font-weight:700;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--ink3);
+    }
+    .g-hover-overlay{
+      position:absolute;inset:0;background:rgba(11,11,11,.65);
+      display:flex;align-items:center;justify-content:center;
+      opacity:0;transition:opacity .25s;
+    }
+    .g-hover-overlay span{
+      background:var(--lime);color:var(--ink);
+      padding:8px 18px;border-radius:100px;
+      font-weight:700;font-size:.8rem;
+    }
+    .g-item:hover .g-hover-overlay{opacity:1;}
+
+    /* ══════════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════════ */
+    .testi{background:var(--paper);}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .t-card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:32px;
+      transition:transform .25s,box-shadow .25s;
+    }
+    .t-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+    .t-stars{font-size:1rem;color:#f59e0b;letter-spacing:2px;margin-bottom:16px;}
+    .t-quote{
+      color:var(--ink2);font-size:.95rem;line-height:1.7;
+      font-style:italic;margin-bottom:22px;
+      border-left:3px solid var(--lime);padding-left:14px;
+    }
+    .t-author{display:flex;align-items:center;gap:12px;}
+    .t-avatar{
+      width:42px;height:42px;border-radius:50%;
+      background:var(--ink);color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;font-size:.9rem;flex-shrink:0;
+    }
+    .t-name{font-weight:700;font-size:.9rem;color:var(--ink);}
+    .t-role{font-size:.78rem;color:var(--ink3);}
+
+    /* ══════════════════════════════════════
+       CONTACT
+    ══════════════════════════════════════ */
+    .contact{background:var(--ink);}
+    .contact-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start;}
+    .contact-left h2{color:#fff;margin-bottom:16px;}
+    .contact-left p{color:rgba(255,255,255,.5);font-size:1rem;line-height:1.7;margin-bottom:36px;}
+    .contact-detail{
+      display:flex;gap:14px;align-items:flex-start;
+      padding:18px;background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.07);border-radius:var(--radius-sm);
+      margin-bottom:12px;transition:border-color .2s;
+    }
+    .contact-detail:hover{border-color:rgba(200,255,0,.3);}
+    .cd-icon{
+      width:42px;height:42px;border-radius:9px;flex-shrink:0;
+      background:rgba(200,255,0,.1);border:1px solid rgba(200,255,0,.2);
+      display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+    }
+    .cd-label{font-size:.78rem;color:rgba(255,255,255,.35);margin-bottom:3px;}
+    .cd-val{font-size:.97rem;font-weight:600;color:#fff;}
+    .cd-val a{color:var(--lime);}
+
+    /* Form */
+    .contact-form{
+      background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+      border-radius:var(--radius);padding:40px;
+    }
+    .contact-form h3{color:#fff;margin-bottom:6px;}
+    .contact-form .f-sub{color:rgba(255,255,255,.4);font-size:.88rem;margin-bottom:28px;}
+    .f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .f-group{margin-bottom:16px;display:flex;flex-direction:column;}
+    .f-group label{
+      font-size:.77rem;font-weight:700;letter-spacing:.06em;
+      text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px;
+    }
+    .f-group input,.f-group select,.f-group textarea{
+      background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);
+      color:#fff;border-radius:var(--radius-sm);
+      padding:12px 16px;font-size:.93rem;font-family:'Outfit',sans-serif;
+      outline:none;transition:border-color .2s,box-shadow .2s;
+    }
+    .f-group input::placeholder,.f-group textarea::placeholder{color:rgba(255,255,255,.2);}
+    .f-group input:focus,.f-group select:focus,.f-group textarea:focus{
+      border-color:var(--lime);box-shadow:0 0 0 3px rgba(200,255,0,.1);
+    }
+    .f-group select option{background:#1a1a1a;color:#fff;}
+    .f-group textarea{resize:vertical;min-height:120px;}
+    .f-submit{
+      width:100%;padding:15px;
+      background:var(--lime);color:var(--ink);
+      border:none;border-radius:var(--radius-sm);
+      font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.08em;
+      cursor:pointer;transition:all .22s;
+    }
+    .f-submit:hover{background:#d4ff26;transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,255,0,.3);}
+    .f-note{text-align:center;color:rgba(255,255,255,.25);font-size:.75rem;margin-top:10px;}
+    .f-success{
+      display:none;text-align:center;padding:18px;
+      background:rgba(200,255,0,.08);border:1px solid rgba(200,255,0,.3);
+      border-radius:var(--radius-sm);color:var(--lime);font-weight:600;margin-top:14px;
+    }
+    .f-success.show{display:block;}
+    .wa-float-btn{
+      display:flex;align-items:center;gap:8px;
+      background:#25d366;color:#fff;
+      padding:12px 22px;border-radius:var(--radius-sm);
+      font-weight:700;margin-top:16px;width:100%;justify-content:center;
+      transition:all .2s;
+    }
+    .wa-float-btn:hover{background:#20bd5a;transform:translateY(-2px);}
+
+    /* ══════════════════════════════════════
+       MAP
+    ══════════════════════════════════════ */
+    .map-sec{background:var(--paper2);padding:64px 0;}
+    .map-wrap{
+      border-radius:var(--radius);overflow:hidden;
+      border:1px solid var(--border);box-shadow:var(--shadow);
+      margin-top:32px;
+    }
+    .map-wrap iframe{width:100%;height:420px;border:none;display:block;}
+
+    /* ══════════════════════════════════════
+       STATS / COUNTER
+    ══════════════════════════════════════ */
+    .stats-bar{
+      background:var(--paper2);
+      border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+      padding:44px 0;
+    }
+    .stats-inner{display:grid;grid-template-columns:repeat(5,1fr);gap:0;}
+    .stat-col{
+      text-align:center;border-right:1px solid var(--border);
+      padding:0 24px;
+    }
+    .stat-col:last-child{border:none;}
+    .stat-n{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:3rem;line-height:1;color:var(--ink);
+    }
+    .stat-n.lime{color:var(--blue);}
+    .stat-l{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:4px;}
+    .visitor-pill{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--ink);color:#fff;
+      padding:8px 18px;border-radius:100px;margin:0 auto;
+    }
+    .v-dot{width:8px;height:8px;border-radius:50%;background:var(--lime);animation:blink 2s infinite;}
+    @keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
+    .v-count{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--lime);}
+    .v-lbl{font-size:.72rem;color:rgba(255,255,255,.4);}
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    .footer{background:var(--ink);color:#fff;padding:64px 0 28px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:48px;margin-bottom:48px;}
+    .footer-brand p{color:rgba(255,255,255,.4);font-size:.88rem;margin:16px 0 22px;line-height:1.7;max-width:300px;}
+    .footer-col h4{
+      font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:rgba(255,255,255,.3);margin-bottom:16px;
+    }
+    .footer-col ul li{margin-bottom:11px;}
+    .footer-col ul li a{color:rgba(255,255,255,.55);font-size:.88rem;transition:color .18s;}
+    .footer-col ul li a:hover{color:var(--lime);}
+    .footer-socials{display:flex;gap:10px;}
+    .f-social{
+      width:36px;height:36px;border-radius:8px;
+      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
+      display:flex;align-items:center;justify-content:center;
+      font-size:.95rem;transition:all .2s;
+    }
+    .f-social:hover{background:var(--lime);border-color:var(--lime);}
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.07);
+      padding-top:22px;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:12px;
+    }
+    .footer-bottom p{color:rgba(255,255,255,.25);font-size:.78rem;}
+    .footer-bottom .f-lime{color:var(--lime);}
+
+    /* ══════════════════════════════════════
+       FLOATING ELEMENTS
+    ══════════════════════════════════════ */
+    .wa-fab{
+      position:fixed;bottom:24px;right:24px;z-index:500;
+      width:58px;height:58px;border-radius:50%;
+      background:#25d366;color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.7rem;box-shadow:0 4px 20px rgba(37,211,102,.45);
+      transition:transform .22s;
+    }
+    .wa-fab:hover{transform:scale(1.1);}
+    .scroll-up{
+      position:fixed;bottom:92px;right:24px;z-index:500;
+      width:44px;height:44px;border-radius:50%;
+      background:var(--card);border:1px solid var(--border);
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;font-size:1rem;transition:all .22s;
+      opacity:0;pointer-events:none;
+    }
+    .scroll-up.show{opacity:1;pointer-events:auto;}
+    .scroll-up:hover{background:var(--lime);border-color:var(--lime);}
+
+    /* ══════════════════════════════════════
+       ANIMATIONS
+    ══════════════════════════════════════ */
+    @keyframes slideUp{from{opacity:0;transform:translateY(36px);}to{opacity:1;transform:translateY(0);}}
+    .anim{opacity:0;animation:slideUp .7s ease forwards;}
+    .d1{animation-delay:.1s;}.d2{animation-delay:.2s;}.d3{animation-delay:.3s;}.d4{animation-delay:.45s;}
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media(max-width:1024px){
+      .hero-content{grid-template-columns:1fr 1fr;}
+      .why-inner{grid-template-columns:1fr 1fr;gap:48px;}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+      .process-steps{grid-template-columns:1fr 1fr;}
+      .p-step:nth-child(2){border-right:none;}
+      .p-step:nth-child(3){border-top:1px solid var(--border);}
+      .p-step:nth-child(4){border-top:1px solid var(--border);border-right:none;}
+      .p-step-arrow{display:none;}
+      .stats-inner{grid-template-columns:repeat(3,1fr);}
+      .stat-col:nth-child(3){border:none;}
+      .stat-col:nth-child(4){border-top:1px solid var(--border);margin-top:24px;padding-top:24px;}
+      .stat-col:nth-child(5){border-top:1px solid var(--border);margin-top:24px;padding-top:24px;border-right:none;}
+      .corp-strip-inner{grid-template-columns:1fr;gap:24px;}
+      .corp-divider{display:none;}
+    }
+
+    @media(max-width:768px){
+      .section{padding:64px 0;}
+      .topbar .tb-right{display:none;}
+      .nav-links,.nav-actions{display:none;}
+      .hamburger{display:block;}
+      .hero-content{grid-template-columns:1fr;}
+      .hero-right{order:-1;}
+      .hero-photo-card iframe{aspect-ratio:16/9;}
+      .hero-photo-card{border-radius:14px;}
+      .hero-h1{font-size:clamp(3rem,12vw,5.5rem);}
+      .hero{min-height:auto;padding:60px 0 0;}
+      .hero-stats-row{border:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding-top:20px;}
+      .h-stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}
+      .why-inner{grid-template-columns:1fr;}
+      .why-exp-bubble{right:10px;bottom:-10px;}
+      .grid2{grid-template-columns:1fr;}
+      .grid3{grid-template-columns:1fr 1fr;}
+      .testi-grid{grid-template-columns:1fr;}
+      .contact-inner{grid-template-columns:1fr;}
+      .f-row{grid-template-columns:1fr;}
+      .gallery-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+      .g-item{grid-column:span 1 !important;grid-row:span 1 !important;height:160px;}
+      .why-feats{grid-template-columns:1fr;}
+      .stats-inner{grid-template-columns:1fr 1fr;}
+      .stat-col{border:none;border-bottom:1px solid var(--border);padding:14px 0;}
+      .stat-col:last-child{border:none;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+
+    @media(max-width:480px){
+      .grid3{grid-template-columns:1fr;}
+      .hero-ctas{flex-direction:column;}
+      .btn{width:100%;justify-content:center;}
+      .process-steps{grid-template-columns:1fr;}
+      .p-step{border-right:none;border-bottom:1px solid var(--border);}
+    }
+  </style>
 </head>
-<body class="bg-zinc-950 text-white overflow-x-hidden">
-    <!-- NAVBAR -->
-    <nav class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
-        <div class="tail-container px-6 py-5 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-3xl logo-font">💻</div>
-                <div>
-                    <span class="logo-font text-3xl font-semibold tracking-tighter text-white">LaptopCareLab</span>
-                </div>
-            </div>
+<body>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-10 text-lg">
-                <a href="#home" class="nav-link font-medium text-white hover:text-cyan-400">Home</a>
-                <a href="#about" class="nav-link font-medium text-white hover:text-cyan-400">About</a>
-                <a href="#services" class="nav-link font-medium text-white hover:text-cyan-400">Services</a>
-                <a href="#gallery" class="nav-link font-medium text-white hover:text-cyan-400">Gallery</a>
-                <a href="#contact" class="nav-link font-medium text-white hover:text-cyan-400">Contact</a>
-            </div>
+<!-- TOP ALERT BAR -->
+<div class="topbar" role="complementary" aria-label="Contact information">
+  <div class="container">
+    <div class="tb-left">
+      <span class="tb-item">📍 Serving all Delhi-NCR</span>
+      <span class="tb-item">📞 <a href="tel:+919953535866">+91 99535 35866</a></span>
+    </div>
+    <div class="tb-right">
+      <span class="tb-item">🕐 Mon–Sat: 9AM–8PM</span>
+      <span class="tb-item">✉️ <a href="mailto:info@laptopCarelab.com" style="color:rgba(255,255,255,.6);">info@LaptopCareLab.com</a></span>
+    </div>
+  </div>
+</div>
 
-            <!-- CTA + Mobile Hamburger -->
-            <div class="flex items-center gap-4">
-                <a href="tel:9953535866" 
-                   class="hidden sm:flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 transition-colors px-6 py-3 rounded-2xl font-semibold text-sm">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>99535 35866</span>
-                </a>
-                
-                <!-- Hamburger -->
-                <button id="mobile-menu-btn"
-                        class="md:hidden w-12 h-12 flex items-center justify-center text-3xl">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#home" class="nav-logo" aria-label="LaptopCareLab home">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+          </div>
+          <div class="nav-logo-text">
+            <div class="brand">LaptopCareLab</div>
+            <div class="url">www.LaptopCareLab.com</div>
+          </div>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="tel:+919953535866" class="btn btn-ink" aria-label="Call now">📞 +91 99535 35866</a>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-6">
-            <div class="tail-container px-6 flex flex-col gap-6 text-xl">
-                <a href="#home" class="mobile-link">Home</a>
-                <a href="#about" class="mobile-link">About Harpreet</a>
-                <a href="#services" class="mobile-link">Our Services</a>
-                <a href="#gallery" class="mobile-link">Work Gallery</a>
-                <a href="#contact" class="mobile-link">Get In Touch</a>
-                <a href="tel:9953535866" class="bg-cyan-500 text-zinc-950 py-4 rounded-3xl text-center font-bold text-xl flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-phone"></i> Call 99535 35866
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section id="home" class="hero-bg min-h-screen flex items-center relative">
-        <div class="tail-container px-6 grid md:grid-cols-2 gap-12 items-center">
-            <!-- Left Content -->
-            <div class="space-y-8 pt-12 md:pt-0">
-                <div class="inline-flex items-center gap-2 bg-zinc-900 text-cyan-400 text-sm font-medium px-6 py-2 rounded-3xl border border-cyan-400/30">
-                    <i class="fa-solid fa-bolt"></i>
-                    <span>20+ Years Experience • Delhi-NCR</span>
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter">
-                    YOUR LAPTOP.<br>OUR PASSION.
-                </h1>
-                
-                <p class="text-2xl text-zinc-400 max-w-lg">
-                    Hi, I'm <span class="text-white font-semibold">Harpreet Singh</span>.<br>
-                    Delhi's go-to computer engineer for fast, affordable fixes.
-                </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" 
-                       class="bg-cyan-400 hover:bg-cyan-300 transition-all text-zinc-950 font-bold text-xl px-10 py-6 rounded-3xl flex items-center gap-4 group">
-                        FIX MY DEVICE NOW
-                        <span class="text-2xl group-active:rotate-12 transition-transform">→</span>
-                    </a>
-                    
-                    <a href="tel:9953535866" 
-                       class="border-2 border-white/70 hover:border-white text-white font-medium px-8 py-6 rounded-3xl flex items-center gap-3 text-xl">
-                        <i class="fa-solid fa-phone"></i>
-                        99535 35866
-                    </a>
-                </div>
-
-                <div class="flex items-center gap-8 pt-6 text-sm">
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-check text-emerald-400"></i>
-                        <span class="text-zinc-400">Same-day service</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-check text-emerald-400"></i>
-                        <span class="text-zinc-400">100% genuine parts</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Photo -->
-            <div class="relative flex justify-center md:justify-end">
-                <div class="relative w-full max-w-[420px]">
-                    <!-- The photo you provided -->
-                    <img id="hero-photo" 
-                         src="https://via.placeholder.com/800x900/1a1a1a/ffffff?text=Harpreet+Singh+Photo" 
-                         alt="Harpreet Singh - Laptop Repair Expert in Delhi"
-                         class="rounded-3xl shadow-2xl shadow-cyan-400/30 w-full h-auto object-cover">
-                    
-                    <!-- Floating badge -->
-                    <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-cyan-400 text-cyan-400 px-8 py-4 rounded-3xl shadow-xl flex items-center gap-3">
-                        <div class="text-5xl">🛠️</div>
-                        <div>
-                            <div class="font-bold text-xl">Harpreet Singh</div>
-                            <div class="text-sm opacity-75">20 Years • Trusted by 2000+ clients</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Neon glow ring -->
-                    <div class="absolute inset-0 border-4 border-cyan-400/30 rounded-3xl -z-10 animate-pulse"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 hidden md:flex flex-col items-center gap-2 text-xs text-zinc-500">
-            <div class="w-px h-12 bg-gradient-to-b from-transparent via-cyan-400 to-transparent"></div>
-            <span class="tracking-widest">SCROLL FOR MAGIC</span>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-24 bg-zinc-900">
-        <div class="tail-container px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <!-- Photo again (same image) -->
-                <div class="relative">
-                    <img src="https://via.placeholder.com/800x900/1a1a1a/ffffff?text=Harpreet+Singh+Photo" 
-                         alt="Harpreet Singh working on laptop repair"
-                         class="rounded-3xl w-full shadow-2xl">
-                    <div class="absolute top-8 -right-8 bg-emerald-500 text-zinc-950 px-6 py-3 rounded-2xl font-bold text-lg shadow-xl">
-                        20 YEARS<br>OF FIXING TECH
-                    </div>
-                </div>
-
-                <!-- Bio -->
-                <div class="space-y-8">
-                    <div class="max-w-md">
-                        <span class="px-5 py-2 bg-cyan-900/50 text-cyan-400 text-sm font-medium rounded-3xl">Meet the Expert</span>
-                    </div>
-                    
-                    <h2 class="text-5xl font-bold tracking-tight">Harpreet Singh</h2>
-                    
-                    <p class="text-xl text-zinc-300 leading-relaxed">
-                        For the last 20 years I've been fixing laptops, desktops, networks and viruses for homes and companies across Delhi-NCR. 
-                        From university students to big corporate offices — I’ve got your back.
-                    </p>
-                    
-                    <div class="grid grid-cols-3 gap-6 pt-6">
-                        <div>
-                            <div class="text-4xl font-bold text-cyan-400">20</div>
-                            <div class="text-zinc-400 text-sm">Years fixing tech</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-bold text-cyan-400">2000+</div>
-                            <div class="text-zinc-400 text-sm">Happy clients</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-bold text-cyan-400">Delhi</div>
-                            <div class="text-zinc-400 text-sm">NCR Service Area</div>
-                        </div>
-                    </div>
-                    
-                    <div class="pt-6 flex items-center gap-4 text-sm uppercase tracking-widest text-zinc-400">
-                        <div class="h-px flex-1 bg-zinc-700"></div>
-                        <span>Trusted by startups, colleges &amp; corporates</span>
-                        <div class="h-px flex-1 bg-zinc-700"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-24 bg-zinc-950">
-        <div class="tail-container px-6">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-2 px-8 py-3 bg-zinc-900 rounded-3xl text-cyan-400 text-sm font-medium">
-                    <i class="fa-solid fa-toolbox"></i> WHAT I FIX
-                </div>
-                <h2 class="mt-6 text-5xl font-bold tracking-tighter">Services that save your day</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
-                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">💻</div>
-                    <h3 class="text-3xl font-semibold mb-3">Laptop Repair</h3>
-                    <p class="text-zinc-400">Screen replacement, keyboard fix, battery issues, overheating — all brands (Dell, HP, Lenovo, MacBook &amp; more).</p>
-                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
-                        <span>Starting ₹299</span>
-                        <span class="flex-1 h-px bg-zinc-700"></span>
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
-                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🖥️</div>
-                    <h3 class="text-3xl font-semibold mb-3">Desktop &amp; PC Repair</h3>
-                    <p class="text-zinc-400">Motherboard repair, RAM upgrade, SSD installation, power supply issues — home &amp; office PCs.</p>
-                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
-                        <span>Starting ₹199</span>
-                        <span class="flex-1 h-px bg-zinc-700"></span>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
-                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🌐</div>
-                    <h3 class="text-3xl font-semibold mb-3">Networking Solutions</h3>
-                    <p class="text-zinc-400">Wi-Fi setup, router configuration, LAN networking, CCTV installation, office network troubleshooting.</p>
-                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
-                        <span>Starting ₹499</span>
-                        <span class="flex-1 h-px bg-zinc-700"></span>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50">
-                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🔧</div>
-                    <h3 class="text-3xl font-semibold mb-3">Troubleshooting</h3>
-                    <p class="text-zinc-400">Blue screen, slow performance, random crashes, hardware detection issues — I diagnose in minutes.</p>
-                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
-                        <span>Starting ₹299</span>
-                        <span class="flex-1 h-px bg-zinc-700"></span>
-                    </div>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-cyan-400/50 col-span-1 md:col-span-2 lg:col-span-1">
-                    <div class="w-14 h-14 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">🛡️</div>
-                    <h3 class="text-3xl font-semibold mb-3">Virus &amp; Malware Removal</h3>
-                    <p class="text-zinc-400">Complete cleanup, ransomware removal, data recovery, Windows reinstallation with full security setup.</p>
-                    <div class="mt-8 text-cyan-400 text-sm font-medium flex items-center gap-2">
-                        <span>Starting ₹199</span>
-                        <span class="flex-1 h-px bg-zinc-700"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="py-24 bg-zinc-900">
-        <div class="tail-container px-6">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <span class="text-cyan-400 text-sm tracking-widest font-medium">REAL WORK • REAL RESULTS</span>
-                    <h2 class="text-5xl font-bold tracking-tighter">Latest Repairs</h2>
-                </div>
-                <a href="#contact" class="text-cyan-400 hover:text-cyan-300 flex items-center gap-3 text-sm font-medium">
-                    NEED A FIX LIKE THIS? 
-                    <span class="text-3xl">→</span>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Gallery images (high-quality free stock) -->
-                <div class="relative overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/1015/800/600" 
-                         alt="Laptop screen replacement in Delhi" 
-                         class="gallery-img w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <p class="font-medium">MacBook Pro Screen Swap</p>
-                    </div>
-                </div>
-                
-                <div class="relative overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/160/800/600" 
-                         alt="Virus removal on Windows laptop" 
-                         class="gallery-img w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <p class="font-medium">Full Virus Cleanup</p>
-                    </div>
-                </div>
-                
-                <div class="relative overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/201/800/600" 
-                         alt="Networking setup for office" 
-                         class="gallery-img w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <p class="font-medium">Office Wi-Fi Network</p>
-                    </div>
-                </div>
-                
-                <div class="relative overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/251/800/600" 
-                         alt="HP laptop motherboard repair Delhi" 
-                         class="gallery-img w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <p class="font-medium">Motherboard Repair</p>
-                    </div>
-                </div>
-                
-                <div class="relative overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/29/800/600" 
-                         alt="SSD upgrade in laptop" 
-                         class="gallery-img w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <p class="font-medium">SSD + RAM Upgrade</p>
-                    </div>
-                </div>
-                
-                <div class="relative overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/318/800/600" 
-                         alt="Gaming laptop cooling fix Delhi" 
-                         class="gallery-img w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <p class="font-medium">Gaming Laptop Cooling Fix</p>
-                    </div>
-                </div>
-            </div>
-            
-            <p class="text-center text-zinc-400 text-sm mt-12">Swipe or scroll — every device tells a story of a happy client in Delhi-NCR</p>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-zinc-950">
-        <div class="tail-container px-6 grid lg:grid-cols-2 gap-16">
-            <!-- Form -->
-            <div>
-                <div class="max-w-md">
-                    <h2 class="text-5xl font-bold tracking-tighter mb-3">Let's fix it today</h2>
-                    <p class="text-zinc-400 text-xl mb-10">Drop your details and I'll call you within 30 minutes.</p>
-                    
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Your Name</label>
-                                <input type="text" id="name" required
-                                       class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Phone</label>
-                                <input type="tel" id="phone" required
-                                       class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Email (optional)</label>
-                            <input type="email" id="email"
-                                   class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">What needs fixing?</label>
-                            <select id="service" required
-                                    class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none">
-                                <option value="">Select service</option>
-                                <option value="Laptop Repair">Laptop Repair</option>
-                                <option value="Desktop Repair">Desktop Repair</option>
-                                <option value="Virus Removal">Virus Removal</option>
-                                <option value="Networking">Networking Setup</option>
-                                <option value="Troubleshooting">Troubleshooting</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest mb-2 text-zinc-400">Message / Problem</label>
-                            <textarea id="message" rows="4" required
-                                      class="w-full bg-zinc-900 border border-zinc-700 focus:border-cyan-400 rounded-3xl px-6 py-5 text-lg outline-none resize-none"></textarea>
-                        </div>
-                        
-                        <button type="submit"
-                                class="w-full bg-gradient-to-r from-cyan-400 to-emerald-400 text-zinc-950 font-bold text-2xl py-7 rounded-3xl hover:scale-105 transition-all flex items-center justify-center gap-4">
-                            SEND MESSAGE 
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="lg:pt-12">
-                <div class="bg-zinc-900 rounded-3xl p-10 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-4 mb-10">
-                            <div class="w-16 h-16 bg-cyan-400 rounded-2xl flex items-center justify-center text-4xl text-zinc-950">📍</div>
-                            <div>
-                                <div class="font-medium text-2xl">Delhi-NCR</div>
-                                <div class="text-zinc-400">Home service available across Delhi, Noida, Gurgaon, Faridabad</div>
-                            </div>
-                        </div>
-                        
-                        <a href="tel:9953535866" class="block group">
-                            <div class="flex items-center gap-6 border-b border-zinc-700 pb-8">
-                                <i class="fa-solid fa-phone text-5xl text-cyan-400 group-active:scale-110 transition-transform"></i>
-                                <div>
-                                    <div class="text-4xl font-bold tracking-tighter">99535 35866</div>
-                                    <div class="text-emerald-400 text-sm">Tap to call • WhatsApp ready</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="pt-12 border-t border-zinc-700">
-                        <div class="text-xs uppercase tracking-widest text-zinc-500 mb-3">Also available on</div>
-                        <div class="flex gap-6 text-4xl">
-                            <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-auto pt-10 text-xs text-zinc-500">
-                        Harpreet Singh<br>
-                        LaptopCareLab.com<br>
-                        Delhi, India
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-black py-16 border-t border-zinc-800">
-        <div class="tail-container px-6 text-center">
-            <div class="flex justify-center mb-6">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 bg-cyan-400 rounded-2xl flex items-center justify-center text-zinc-950 text-3xl">💻</div>
-                    <span class="logo-font text-4xl font-semibold tracking-tighter">LaptopCareLab</span>
-                </div>
-            </div>
-            
-            <p class="text-zinc-500 text-sm">© 2026 Harpreet Singh • All rights reserved</p>
-            <p class="text-zinc-600 text-xs mt-6">Built with ❤️ for Delhi's youth who hate slow laptops</p>
-        </div>
-    </footer>
-
-    <!-- Success Modal -->
-    <div id="success-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[999]">
-        <div class="bg-zinc-900 rounded-3xl p-10 max-w-xs text-center">
-            <div class="text-7xl mb-6">🎉</div>
-            <h3 class="text-3xl font-bold mb-3">Message Received!</h3>
-            <p class="text-zinc-400 mb-8">Harpreet will call you shortly on 99535 35866.</p>
-            <button onclick="closeModal()" 
-                    class="bg-cyan-400 text-zinc-950 px-10 py-4 rounded-3xl font-semibold">Awesome!</button>
-        </div>
+        <button class="hamburger" id="burgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <script>
-        // Tailwind script already loaded via CDN
-        
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('mobile-menu-btn')
-        const mobileMenu = document.getElementById('mobile-menu')
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden')
-            const icon = menuBtn.querySelector('i')
-            icon.classList.toggle('fa-bars')
-            icon.classList.toggle('fa-xmark')
-        })
-        
-        // Smooth scrolling for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') === '#') return
-                e.preventDefault()
-                const target = document.querySelector(this.getAttribute('href'))
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' })
-                }
-                // Close mobile menu if open
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden')
-                    menuBtn.querySelector('i').classList.add('fa-bars')
-                    menuBtn.querySelector('i').classList.remove('fa-xmark')
-                }
-            })
-        })
-        
-        // Contact form submission
-        const form = document.getElementById('contact-form')
-        form.addEventListener('submit', function(e) {
-            e.preventDefault()
-            
-            // Fake submission delay
-            setTimeout(() => {
-                document.getElementById('success-modal').classList.remove('hidden')
-                form.reset()
-            }, 800)
-        })
-        
-        function closeModal() {
-            document.getElementById('success-modal').classList.add('hidden')
-        }
-        
-        // Replace placeholder photo with your actual image
-        // IMPORTANT INSTRUCTION:
-        // 1. Save the photo you uploaded in this chat as "harpreet.jpg"
-        // 2. Put it in the same folder as this HTML file
-        // 3. Replace both placeholder src below with "harpreet.jpg"
-        
-        const heroPhoto = document.getElementById('hero-photo')
-        // Uncomment and change the line below once you have the file:
-        // heroPhoto.src = "harpreet.jpg"
-        
-        // For demo purposes it currently shows a placeholder.
-        // When you host this on Netlify / Vercel / GitHub Pages, just upload the real photo.
-        
-        console.log('%c✅ LaptopCareLab website ready! Replace the photo src with your real image.', 'color:#22d3ee; font-family:monospace')
-    </script>
+    <div class="mobile-nav" id="mobileNav" role="menu">
+      <a href="#home" role="menuitem">Home</a>
+      <a href="#services" role="menuitem">Services</a>
+      <a href="#about" role="menuitem">About Harpreet Singh</a>
+      <a href="#gallery" role="menuitem">Gallery</a>
+      <a href="#testimonials" role="menuitem">Reviews</a>
+      <a href="#contact" role="menuitem">Contact</a>
+      <a href="tel:+919953535866" style="color:#c8ff00;font-weight:800;background:#0b0b0b;" role="menuitem">📞 +91 99535 35866</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main>
+<section id="home" class="hero" aria-label="LaptopCareLab – Hero section">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-circle" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:2;width:92%;max-width:1200px;margin:0 auto;">
+    <div class="hero-content">
+
+      <!-- Left -->
+      <div>
+        <div class="hero-eyebrow anim d1">Delhi-NCR's Premier Repair Expert</div>
+        <h1 class="hero-h1 anim d2">
+          YOUR TECH,<br/>
+          <span class="accent">FIXED</span><br/>
+          FAST.
+        </h1>
+        <p class="hero-sub anim d3">
+          Harpreet Singh brings <strong style="color:#fff;">20 years of precision engineering</strong> to your doorstep — laptop repairs, corporate IT, networking & virus removal across all of Delhi-NCR.
+        </p>
+        <div class="hero-ctas anim d4">
+          <a href="#contact" class="btn btn-lime" aria-label="Book a service appointment">Book a Service →</a>
+          <a href="tel:+919953535866" class="btn btn-outline-white" aria-label="Call Harpreet Singh">📞 Call Now</a>
+          <a href="https://wa.me/919953535866" class="btn" style="background:rgba(37,211,102,.15);color:#fff;border:1.5px solid rgba(37,211,102,.4);" target="_blank" rel="noopener" aria-label="WhatsApp chat">💬 WhatsApp</a>
+        </div>
+        <div class="hero-stats-row anim d4">
+          <div class="h-stat"><div class="n" id="hs1">20+</div><div class="l">Years Exp.</div></div>
+          <div class="h-stat"><div class="n" id="hs2">5K+</div><div class="l">Devices Fixed</div></div>
+          <div class="h-stat"><div class="n" id="hs3">98%</div><div class="l">Satisfaction</div></div>
+        </div>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="hero-right anim d3">
+        <div class="hero-photo-card">
+          <div class="hero-badge-corner" aria-label="Rating badge">⭐ 5.0 Rated</div>
+          <iframe
+            src="https://drive.google.com/file/d/1NW7qA3Qqb1Ev6zwZszpNum59Cc8_ctYf/preview"
+            title="Harpreet Singh — Senior Computer Engineer, LaptopCareLab Delhi-NCR"
+            loading="lazy"
+            allow="autoplay"
+          ></iframe>
+          <div class="hero-name-tag">
+            <div class="eng-name">Harpreet Singh</div>
+            <div class="eng-title">Senior Computer Engineer · 20 Yrs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true" role="presentation">
+  <div class="marquee-track">
+    <span class="marquee-item">Laptop Repair</span>
+    <span class="marquee-item">Computer Repair</span>
+    <span class="marquee-item">Virus Removal</span>
+    <span class="marquee-item">Corporate IT Support</span>
+    <span class="marquee-item">Network Setup</span>
+    <span class="marquee-item">Data Recovery</span>
+    <span class="marquee-item">Hardware Upgrade</span>
+    <span class="marquee-item">Same-Day Service</span>
+    <span class="marquee-item">Laptop Repair</span>
+    <span class="marquee-item">Computer Repair</span>
+    <span class="marquee-item">Virus Removal</span>
+    <span class="marquee-item">Corporate IT Support</span>
+    <span class="marquee-item">Network Setup</span>
+    <span class="marquee-item">Data Recovery</span>
+    <span class="marquee-item">Hardware Upgrade</span>
+    <span class="marquee-item">Same-Day Service</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="section services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="services-head">
+      <div>
+        <span class="label">What We Do</span>
+        <h2 id="services-title">Services Built<br/>for Speed &amp; Precision</h2>
+      </div>
+      <a href="#contact" class="btn btn-outline" aria-label="Get a free quote for repair">Get a Free Quote →</a>
+    </div>
+
+    <div class="grid3" role="list">
+      <article class="srv-card" role="listitem" aria-label="Laptop Repair Service">
+        <div class="srv-num" aria-hidden="true">01</div>
+        <div class="srv-icon" aria-hidden="true">💻</div>
+        <h3>Laptop Repair</h3>
+        <p>Screen replacements, battery issues, keyboard damage, motherboard repairs, overheating fixes — all laptop brands covered with genuine parts.</p>
+        <span class="srv-tag">From ₹499</span>
+      </article>
+
+      <article class="srv-card" role="listitem" aria-label="Computer Repair Service">
+        <div class="srv-num" aria-hidden="true">02</div>
+        <div class="srv-icon" aria-hidden="true">🖥️</div>
+        <h3>Computer Repair</h3>
+        <p>Desktop workstation repairs — RAM upgrades, HDD/SSD replacement, power supply faults, full system servicing for home and office setups.</p>
+        <span class="srv-tag corp">Corporate Ready</span>
+      </article>
+
+      <article class="srv-card" role="listitem" aria-label="Virus and Malware Removal">
+        <div class="srv-num" aria-hidden="true">03</div>
+        <div class="srv-icon" aria-hidden="true">🛡️</div>
+        <h3>Virus &amp; Malware Removal</h3>
+        <p>Deep-scan antivirus removal, ransomware recovery, spyware cleanup, and security hardening to keep business data protected.</p>
+        <span class="srv-tag">From ₹299</span>
+      </article>
+
+      <article class="srv-card" role="listitem" aria-label="Networking and WiFi Setup">
+        <div class="srv-num" aria-hidden="true">04</div>
+        <div class="srv-icon" aria-hidden="true">🌐</div>
+        <h3>Networking &amp; WiFi</h3>
+        <p>End-to-end office and home network setup, WiFi coverage expansion, router configuration, LAN cabling and secure network architecture.</p>
+        <span class="srv-tag corp">Corporate Ready</span>
+      </article>
+
+      <article class="srv-card" role="listitem" aria-label="Computer Troubleshooting">
+        <div class="srv-num" aria-hidden="true">05</div>
+        <div class="srv-icon" aria-hidden="true">🔍</div>
+        <h3>Computer Troubleshooting</h3>
+        <p>BSOD fixes, driver errors, OS reinstallation, performance tuning, slow PC recovery and software conflict resolution.</p>
+        <span class="srv-tag">From ₹349</span>
+      </article>
+
+      <article class="srv-card" role="listitem" aria-label="Data Recovery Service">
+        <div class="srv-num" aria-hidden="true">06</div>
+        <div class="srv-icon" aria-hidden="true">💾</div>
+        <h3>Data Recovery</h3>
+        <p>Recover critical files from failed HDDs, SSDs, corrupted drives, pen drives and memory cards — for individuals and enterprises.</p>
+        <span class="srv-tag corp">Corporate Ready</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY / ABOUT -->
+<section id="about" class="section why" aria-labelledby="about-title">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-photo">
+        <iframe
+          src="https://drive.google.com/file/d/1NW7qA3Qqb1Ev6zwZszpNum59Cc8_ctYf/preview"
+          title="Harpreet Singh — Expert Computer Engineer in Delhi-NCR at LaptopCareLab"
+          loading="lazy"
+          allow="autoplay"
+          aria-label="Photo of Harpreet Singh, computer engineer with 20 years experience"
+        ></iframe>
+        <div class="why-exp-bubble" aria-label="20 plus years of experience">
+          <span class="big">20+</span>
+          <span class="sm">YRS EXP</span>
+        </div>
+      </div>
+
+      <div class="why-content">
+        <span class="label light">Why Choose Us</span>
+        <h2 style="color:#fff;margin-bottom:20px;">Delhi‑NCR's Most<br/>Trusted Engineer</h2>
+        <p>
+          <strong style="color:#fff;">Harpreet Singh</strong> has spent two decades perfecting the art of computer engineering — diagnosing, repairing, and securing systems for startups, corporates, and individual professionals across Delhi, Noida, Gurgaon, Faridabad, and beyond. His work ethic is simple: fast, honest, and permanent fixes.
+        </p>
+
+        <div class="why-feats">
+          <div class="why-feat">
+            <div class="feat-icon" aria-hidden="true">⚡</div>
+            <h3>Same-Day Turnaround</h3>
+            <p>Most repairs done in 24 hrs. No waiting weeks for your device back.</p>
+          </div>
+          <div class="why-feat">
+            <div class="feat-icon" aria-hidden="true">🏢</div>
+            <h3>Corporate SLA Support</h3>
+            <p>Dedicated IT support agreements for businesses and offices in NCR.</p>
+          </div>
+          <div class="why-feat">
+            <div class="feat-icon" aria-hidden="true">🔍</div>
+            <h3>Free Diagnosis</h3>
+            <p>Full device assessment at zero cost before any repair commitment.</p>
+          </div>
+          <div class="why-feat">
+            <div class="feat-icon" aria-hidden="true">🛡️</div>
+            <h3>30-Day Warranty</h3>
+            <p>Every repair is backed by a 30-day workmanship guarantee.</p>
+          </div>
+        </div>
+
+        <a href="tel:+919953535866" class="btn btn-lime" aria-label="Call Harpreet Singh for a free consultation">📞 Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORATE STRIP -->
+<section class="corp-strip" aria-label="Corporate IT support packages">
+  <div class="container">
+    <div class="corp-strip-inner">
+      <div>
+        <span class="label">For Corporates</span>
+        <div class="corp-big">IT SUPPORT<br/>THAT SCALES<br/>WITH YOU.</div>
+      </div>
+      <div class="corp-divider" aria-hidden="true"></div>
+      <div class="corp-perks" role="list">
+        <div class="corp-perk" role="listitem">Annual Maintenance Contracts (AMC) available</div>
+        <div class="corp-perk" role="listitem">Multi-device and multi-branch support</div>
+        <div class="corp-perk" role="listitem">Priority response within 4 hours</div>
+        <div class="corp-perk" role="listitem">On-site engineer deployment across NCR</div>
+        <div class="corp-perk" role="listitem">Dedicated account manager for enterprise clients</div>
+      </div>
+      <a href="#contact" class="btn btn-ink" style="flex-shrink:0;" aria-label="Enquire about corporate IT package">Corporate Enquiry →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" aria-labelledby="process-title">
+  <div class="container">
+    <span class="label">How It Works</span>
+    <h2 id="process-title">Repaired in 4 Steps</h2>
+    <div class="process-steps" role="list">
+      <div class="p-step" role="listitem" aria-label="Step 1: Contact Us">
+        <div class="p-step-num" aria-hidden="true">01</div>
+        <div class="p-step-arrow" aria-hidden="true">→</div>
+        <h3>Contact Us</h3>
+        <p>Call, WhatsApp or fill our form. Describe your issue and get a response within 60 minutes.</p>
+      </div>
+      <div class="p-step" role="listitem" aria-label="Step 2: Free Diagnosis">
+        <div class="p-step-num" aria-hidden="true">02</div>
+        <div class="p-step-arrow" aria-hidden="true">→</div>
+        <h3>Free Diagnosis</h3>
+        <p>Harpreet inspects your device at no charge and gives a transparent, itemised quote.</p>
+      </div>
+      <div class="p-step" role="listitem" aria-label="Step 3: Expert Repair">
+        <div class="p-step-num" aria-hidden="true">03</div>
+        <div class="p-step-arrow" aria-hidden="true">→</div>
+        <h3>Expert Repair</h3>
+        <p>Precision repair using quality parts. Most jobs completed within 24 hours.</p>
+      </div>
+      <div class="p-step" role="listitem" aria-label="Step 4: Warranty Return">
+        <div class="p-step-num" aria-hidden="true">04</div>
+        <h3>Warranty Return</h3>
+        <p>Device returned fully tested, with a 30-day warranty and zero hidden charges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar" aria-label="LaptopCareLab statistics and visitor counter">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-col">
+        <div class="stat-n" id="sc1">20+</div>
+        <div class="stat-l">Years Experience</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-n" id="sc2">5,000+</div>
+        <div class="stat-l">Devices Repaired</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-n lime" id="sc3">500+</div>
+        <div class="stat-l">Corporate Clients</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-n" id="sc4">98%</div>
+        <div class="stat-l">Satisfaction Rate</div>
+      </div>
+      <div class="stat-col">
+        <div class="visitor-pill" aria-label="Total website visitors">
+          <div class="v-dot" aria-hidden="true"></div>
+          <div>
+            <div class="v-count" id="visitorNum" aria-live="polite">—</div>
+            <div class="v-lbl">TOTAL VISITORS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="gallery-head">
+      <div>
+        <span class="label">Workshop Gallery</span>
+        <h2 id="gallery-title">See the Work.<br/>Trust the Craft.</h2>
+      </div>
+      <p style="max-width:320px;color:var(--ink3);font-size:.9rem;">A behind-the-scenes look at our lab, repairs, and corporate deployments across Delhi-NCR.</p>
+    </div>
+
+    <div class="gallery-mosaic" role="list">
+      <div class="g-item" role="listitem" aria-label="Laptop repair workshop">
+        <div class="g-placeholder">
+          <div class="g-icon" aria-hidden="true">💻</div>
+          <div class="g-label">Laptop Repair Lab</div>
+        </div>
+        <div class="g-hover-overlay" aria-hidden="true"><span>View Work</span></div>
+      </div>
+      <div class="g-item" role="listitem" aria-label="Desktop computer servicing">
+        <div class="g-placeholder">
+          <div class="g-icon" aria-hidden="true">🖥️</div>
+          <div class="g-label">Desktop Servicing</div>
+        </div>
+        <div class="g-hover-overlay" aria-hidden="true"><span>View Work</span></div>
+      </div>
+      <div class="g-item" role="listitem" aria-label="Corporate office network setup">
+        <div class="g-placeholder">
+          <div class="g-icon" aria-hidden="true">🌐</div>
+          <div class="g-label">Corporate Network</div>
+        </div>
+        <div class="g-hover-overlay" aria-hidden="true"><span>View Work</span></div>
+      </div>
+      <div class="g-item" role="listitem" aria-label="Virus removal and security cleanup">
+        <div class="g-placeholder">
+          <div class="g-icon" aria-hidden="true">🛡️</div>
+          <div class="g-label">Virus Removal</div>
+        </div>
+        <div class="g-hover-overlay" aria-hidden="true"><span>View Work</span></div>
+      </div>
+      <div class="g-item" role="listitem" aria-label="Hardware upgrades and parts">
+        <div class="g-placeholder">
+          <div class="g-icon" aria-hidden="true">🔧</div>
+          <div class="g-label">Hardware Upgrade</div>
+        </div>
+        <div class="g-hover-overlay" aria-hidden="true"><span>View Work</span></div>
+      </div>
+      <div class="g-item" role="listitem" aria-label="Data recovery service">
+        <div class="g-placeholder">
+          <div class="g-icon" aria-hidden="true">💾</div>
+          <div class="g-label">Data Recovery</div>
+        </div>
+        <div class="g-hover-overlay" aria-hidden="true"><span>View Work</span></div>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--ink3);font-size:.8rem;margin-top:16px;"><em>Upload your actual work photos here — gallery slots are ready to be filled via CMS or admin panel.</em></p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section testi" aria-labelledby="testi-title">
+  <div class="container">
+    <span class="label">Client Reviews</span>
+    <h2 id="testi-title" style="margin-bottom:48px;">What Delhi-NCR<br/>Clients Say</h2>
+
+    <div class="testi-grid" role="list">
+      <article class="t-card" role="listitem" aria-label="Review from Vikram Malhotra">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-quote">"Our Gurgaon office had 12 machines hit by ransomware. Harpreet had every machine back online within 36 hours and installed a proper security framework. Exceptional corporate service."</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">VM</div>
+          <div>
+            <div class="t-name">Vikram Malhotra</div>
+            <div class="t-role">IT Head — FinTech Startup, Gurgaon</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="t-card" role="listitem" aria-label="Review from Rhea Kapoor">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-quote">"I'm a freelance designer and my MacBook's screen cracked two days before a client presentation. Harpreet fixed it same evening. Clean work, fair price, and the 30-day warranty gave real peace of mind."</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">RK</div>
+          <div>
+            <div class="t-name">Rhea Kapoor</div>
+            <div class="t-role">Freelance Designer, South Delhi</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="t-card" role="listitem" aria-label="Review from Aditya Bose">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="t-quote">"We signed an AMC with LaptopCareLab for our Noida office. Response time is always under 4 hours. In 2 years, zero downtime surprises. Harpreet Singh is genuinely the best in NCR."</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">AB</div>
+          <div>
+            <div class="t-name">Aditya Bose</div>
+            <div class="t-role">Operations Manager, Noida</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <span class="label light">Get In Touch</span>
+        <h2 id="contact-title" style="color:#fff;margin-bottom:16px;">Let's Fix It.<br/>Today.</h2>
+        <p>Whether it's a single laptop or a 50-machine corporate deployment — reach out and we'll get back to you within 60 minutes.</p>
+
+        <div class="contact-detail" aria-label="Phone contact">
+          <div class="cd-icon" aria-hidden="true">📞</div>
+          <div>
+            <div class="cd-label">Call / WhatsApp</div>
+            <div class="cd-val"><a href="tel:+919953535866">+91 99535 35866</a></div>
+          </div>
+        </div>
+        <div class="contact-detail" aria-label="Email contact">
+          <div class="cd-icon" aria-hidden="true">✉️</div>
+          <div>
+            <div class="cd-label">Email</div>
+            <div class="cd-val"><a href="mailto:info@laptopCarelab.com">info@LaptopCareLab.com</a></div>
+          </div>
+        </div>
+        <div class="contact-detail" aria-label="Service area">
+          <div class="cd-icon" aria-hidden="true">📍</div>
+          <div>
+            <div class="cd-label">Service Area</div>
+            <div class="cd-val" style="color:rgba(255,255,255,.8);">Delhi · Gurgaon · Noida · Faridabad · Greater Noida</div>
+          </div>
+        </div>
+        <div class="contact-detail" aria-label="Business hours">
+          <div class="cd-icon" aria-hidden="true">🕐</div>
+          <div>
+            <div class="cd-label">Working Hours</div>
+            <div class="cd-val" style="color:rgba(255,255,255,.8);">Monday – Saturday: 9 AM – 8 PM</div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/919953535866?text=Hi%20Harpreet%20ji%2C%20I%20need%20help%20with%20my%20computer." class="wa-float-btn" target="_blank" rel="noopener" aria-label="Start WhatsApp chat with Harpreet Singh">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send an Enquiry</h3>
+        <p class="f-sub">We'll respond within 60 minutes during business hours.</p>
+        <form id="repairForm" novalidate aria-label="Repair enquiry form">
+          <div class="f-row">
+            <div class="f-group">
+              <label for="cName">Full Name *</label>
+              <input type="text" id="cName" name="name" placeholder="Your full name" required autocomplete="name"/>
+            </div>
+            <div class="f-group">
+              <label for="cPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="cPhone" name="phone" placeholder="e.g. 98765 43210" required autocomplete="tel"/>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="cEmail">Email Address</label>
+              <input type="email" id="cEmail" name="email" placeholder="you@company.com" autocomplete="email"/>
+            </div>
+            <div class="f-group">
+              <label for="cType">Client Type *</label>
+              <select id="cType" name="clientType" required>
+                <option value="">— Select —</option>
+                <option value="individual">Individual / Personal</option>
+                <option value="startup">Startup / SME</option>
+                <option value="corporate">Corporate / Enterprise</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="f-group">
+            <label for="cService">Service Required *</label>
+            <select id="cService" name="service" required>
+              <option value="">— Select a Service —</option>
+              <option value="laptop">💻 Laptop Repair</option>
+              <option value="computer">🖥️ Computer Repair</option>
+              <option value="virus">🛡️ Virus / Malware Removal</option>
+              <option value="network">🌐 Networking Setup</option>
+              <option value="trouble">🔍 Troubleshooting</option>
+              <option value="data">💾 Data Recovery</option>
+              <option value="amc">📋 AMC / Corporate Contract</option>
+              <option value="other">🔧 Other</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label for="cDevice">Device Brand &amp; Model</label>
+            <input type="text" id="cDevice" name="device" placeholder="e.g. Dell XPS 15, HP EliteBook, Custom Build"/>
+          </div>
+          <div class="f-group">
+            <label for="cMsg">Describe the Issue *</label>
+            <textarea id="cMsg" name="message" placeholder="What's happening with your device? Any error messages, symptoms or history..." required></textarea>
+          </div>
+          <button type="submit" class="f-submit" aria-label="Submit repair enquiry">SUBMIT ENQUIRY →</button>
+          <p class="f-note">Or call directly: <a href="tel:+919953535866" style="color:rgba(200,255,0,.7);">+91 99535 35866</a></p>
+        </form>
+        <div class="f-success" id="fSuccess" role="alert" aria-live="assertive">
+          ✅ Enquiry received! Harpreet Singh will contact you within 60 minutes.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-sec" aria-label="Service coverage map for Delhi-NCR">
+  <div class="container">
+    <span class="label">Service Area</span>
+    <h2>We Cover All of Delhi-NCR</h2>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.95103135876!2d76.76356164779296!3d28.644287003465456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sDelhi%20NCR!5e0!3m2!1sen!2sin!4v1703000000000!5m2!1sen!2sin"
+        title="LaptopCareLab service coverage map – Delhi-NCR region"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Google Map showing Delhi-NCR service area covered by LaptopCareLab"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" aria-label="Website footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" aria-label="LaptopCareLab homepage">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+          </div>
+          <div class="nav-logo-text">
+            <div class="brand" style="color:#fff;">LaptopCareLab</div>
+            <div class="url" style="color:rgba(255,255,255,.3);">www.LaptopCareLab.com</div>
+          </div>
+        </a>
+        <p>Delhi-NCR's most trusted computer engineer. Harpreet Singh has been delivering precision repairs and IT solutions to businesses and professionals since 2004.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/919953535866" class="f-social" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="tel:+919953535866" class="f-social" aria-label="Phone">📞</a>
+          <a href="mailto:info@laptopCarelab.com" class="f-social" aria-label="Email">✉️</a>
+        </div>
+      </div>
+
+      <nav aria-label="Quick navigation links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav aria-label="Services navigation links">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Laptop Repair</a></li>
+            <li><a href="#services">Computer Repair</a></li>
+            <li><a href="#services">Virus Removal</a></li>
+            <li><a href="#services">Networking</a></li>
+            <li><a href="#services">Troubleshooting</a></li>
+            <li><a href="#services">Data Recovery</a></li>
+            <li><a href="#services">Corporate AMC</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Contact Harpreet Singh</h4>
+        <ul>
+          <li><a href="tel:+919953535866" style="color:var(--lime);font-weight:700;">📞 +91 99535 35866</a></li>
+          <li><a href="mailto:info@laptopCarelab.com">✉️ info@LaptopCareLab.com</a></li>
+          <li><a href="#contact">📍 Delhi · Noida · Gurgaon · Faridabad</a></li>
+          <li style="color:rgba(255,255,255,.4);font-size:.85rem;padding:0;">🕐 Mon–Sat: 9AM–8PM</li>
+        </ul>
+        <a href="#contact" class="btn btn-lime" style="margin-top:18px;display:inline-flex;" aria-label="Book a service with LaptopCareLab">Book a Service →</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 <span class="f-lime">LaptopCareLab.com</span> · Harpreet Singh · All Rights Reserved.</p>
+      <p>Serving Delhi-NCR corporates &amp; professionals since 2004</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/919953535866?text=Hi%20Harpreet%20ji%2C%20I%20need%20IT%20support." class="wa-fab" target="_blank" rel="noopener" aria-label="Chat with Harpreet Singh on WhatsApp">💬</a>
+
+<!-- Scroll Up -->
+<button class="scroll-up" id="scrollUpBtn" aria-label="Scroll back to top of page">↑</button>
+
+<!-- SCRIPTS -->
+<script>
+  /* ─── MOBILE NAV ─── */
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  burgerBtn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', open);
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  /* ─── SCROLL UP ─── */
+  const scrollUpBtn = document.getElementById('scrollUpBtn');
+  window.addEventListener('scroll', () => {
+    scrollUpBtn.classList.toggle('show', window.scrollY > 500);
+  }, {passive:true});
+  scrollUpBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  /* ─── FORM SUBMIT ─── */
+  const repairForm = document.getElementById('repairForm');
+  const fSuccess = document.getElementById('fSuccess');
+  repairForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('cName').value.trim();
+    const phone = document.getElementById('cPhone').value.trim();
+    const service = document.getElementById('cService').value;
+    const msg = document.getElementById('cMsg').value.trim();
+    if (!name || !phone || !service || !msg) {
+      alert('Please complete all required fields (*).');
+      return;
+    }
+    repairForm.style.display = 'none';
+    fSuccess.classList.add('show');
+  });
+
+  /* ─── VISITOR COUNTER ─── */
+  function initVisitorCounter() {
+    const KEY = 'lcl2_visits';
+    const SESSION = 'lcl2_sess';
+    let count = parseInt(localStorage.getItem(KEY) || '0');
+    if (!count) count = 4200 + Math.floor(Math.random() * 800);
+    if (!sessionStorage.getItem(SESSION)) {
+      count++;
+      sessionStorage.setItem(SESSION, '1');
+    }
+    localStorage.setItem(KEY, count);
+    const el = document.getElementById('visitorNum');
+    if (!el) return;
+    let c = Math.max(0, count - 60), target = count;
+    const step = (target - c) / (1600 / 16);
+    const t = setInterval(() => {
+      c = Math.min(target, c + step);
+      el.textContent = Math.round(c).toLocaleString('en-IN');
+      if (c >= target) clearInterval(t);
+    }, 16);
+  }
+
+  /* ─── INTERSECTION OBSERVER ─── */
+  const statsSection = document.querySelector('.stats-bar');
+  let statsRan = false;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !statsRan) {
+        statsRan = true;
+        initVisitorCounter();
+      }
+    });
+  }, {threshold: 0.3});
+  if (statsSection) io.observe(statsSection);
+
+  /* ─── ACTIVE NAV ─── */
+  const sects = document.querySelectorAll('section[id]');
+  const navAs = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sects.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+    navAs.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${cur}` ? 'var(--ink)' : '';
+      a.style.background = a.getAttribute('href') === `#${cur}` ? 'var(--paper2)' : '';
+    });
+  }, {passive:true});
+</script>
 </body>
 </html>
